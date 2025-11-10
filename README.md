@@ -1,6 +1,6 @@
 # IUHer-Foodie
 Website giới thiệu các quán ăn phù hợp với bạn
-![alt text](image.png)
+![alt text](web_demo.png)
 # Thành viên
  - Nguyễn Đăng Dương : Leader  
  - Huỳnh Minh Quân   : Design & Dev
