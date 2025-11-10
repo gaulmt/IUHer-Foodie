@@ -1,5 +1,4 @@
 # IUHer Foodie
-(logo_IUHer_Foodie.png)
 Website giới thiệu các quán ăn phù hợp với bạn
 ![alt text](logo_IUHer_Foodie.png)
 
