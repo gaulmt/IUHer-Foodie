@@ -1,7 +1,7 @@
-<img src="logo.png" alt="Logo" width="30" style="vertical-align: middle;"> **IUHer Foodie**
+# IUHer Foodie
 (logo_IUHer_Foodie.png)
 Website giới thiệu các quán ăn phù hợp với bạn
-![alt text](image.png)
+![alt text](logo_IUHer_Foodie.png)
 
 # Thành viên
  - Nguyễn Đăng Dương : Leader  (Design & Dev & Tester)
