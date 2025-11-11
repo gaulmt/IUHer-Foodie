@@ -1,0 +1,251 @@
+/* style.css - global styles for IUHer Foodie */
+:root {
+    --header-height: 72px;
+    --bg: #fbf8ef;
+    --green: #2f5a2f;
+    --accent-2: #ffd88a;
+    --muted: #6b6b6b;
+}
+
+* {
+    box-sizing: border-box
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    background-image: url('logo.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20%;
+    margin-right: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: #222;
+    padding-top: var(--header-height)
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 18px
+}
+
+/* Topbar */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    z-index: 1200
+}
+
+.topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%
+}
+
+.topbar.dark {
+    background: var(--green);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06)
+}
+
+.brand {
+    font-weight: 800;
+    color: var(--accent-2);
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px
+}
+
+.nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.nav a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px
+}
+
+.nav a.active::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-2);
+    border-radius: 50%;
+    margin-top: 22px
+}
+
+.actions .btn.small {
+    background: var(--accent-2);
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 12px;
+    color: var(--green);
+    cursor: pointer
+}
+
+/* layout helpers */
+.hero {
+    padding: 28px 0
+}
+
+.report-hero {
+    padding: 48px 0 36px;
+    background: linear-gradient(180deg, #f6f3ea, #f6f3ea)
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center
+}
+
+.btn {
+    display: inline-block;
+    background: #d35400;
+    color: #fff;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 10px
+}
+
+/* collage defaults */
+.collage-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px
+}
+
+.collage-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px
+}
+
+/* contact card basics */
+.contact-card {
+    padding: 36px 0;
+    background: transparent
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 24px;
+    align-items: center
+}
+
+.card-image img {
+    width: 100%;
+    border-radius: 10px
+}
+
+.card-content h3 {
+    font-size: 24px
+}
+
+.muted {
+    color: white;
+}
+
+.note_thanks {
+    width: 300px;
+    height: auto;
+}
+
+/* footer */
+.site-footer.dark {
+    background: #26421f;
+    color: #fff;
+    padding: 28px 0
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 18px;
+    align-items: start
+}
+
+.footer-grid a {
+    color: var(--accent-2);
+    text-decoration: none
+}
+
+.footer__icons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    /* 3 cột cho 3 icon */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.iconfooter {
+    display: flex;
+    /* Kích hoạt Flexbox */
+    justify-content: center;
+    /* Căn giữa các ảnh */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    gap: 20px;
+    /* Khoảng cách giữa các ảnh */
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.iconfooter img {
+    width: 10px;
+    height: 10px;
+}
+
+
+/* responsive */
+@media(max-width:900px) {
+    .hero-grid {
+        grid-template-columns: 1fr
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr
+    }
+
+    .collage-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:640px) {
+    .nav {
+        display: none
+    }
+
+    body {
+        padding-top: 56px
+    }
+}
