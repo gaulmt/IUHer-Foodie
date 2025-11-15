@@ -1,117 +1,235 @@
-/* style.css - global styles for IUHer Foodie */
-:root {
-    --header-height: 72px;
-    --bg: #fbf8ef;
-    --green: #2f5a2f;
-    --accent-2: #ffd88a;
-    --muted: #6b6b6b;
-}
+/* phần chung */
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
+
+/* phần header */
 
 .logo {
-    width: 100px;
-    height: 50px;
-    background-image: url('logo.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 20%;
-    margin-right: 100px;
+    position: relative;
+    height: 85px;
+    width: 156px;
+    top: 3px;
+    left: 90px;
 }
+
+.logo:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    border-radius: 22px;
+    border: #1a18143c 4px solid;
+}
+
+:root {
+    --green: #3E5526;
+    --accent: #ffd88a;
+    --muted: #6b6b6b;
+    --topbar-h: 96px;
+}
+
 
 body {
-    margin: 0;
-    font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
-    background: var(--bg);
-    color: #222;
-    padding-top: var(--header-height)
+    padding-top: calc(var(--topbar-h));
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 18px
-}
-
-/* Topbar */
-.topbar {
+.topbar.dark {
+    background: var(--green);
+    color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    z-index: 1200
+    width: 1, 440px;
+    height: 100px;
+    z-index: 20;
 }
 
 .topbar-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%
-}
-
-.topbar.dark {
-    background: var(--green);
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06)
+    padding: 0 18px;
+    height: var(--topbar-h);
 }
 
 .brand {
+    color: var(--accent);
     font-weight: 800;
-    color: var(--accent-2);
-    text-decoration: none;
-    padding: 8px 10px;
-    border-radius: 6px
+    text-decoration: none
 }
 
 .nav {
     display: flex;
-    gap: 28px;
-    align-items: center;
+    gap: 22px;
     list-style: none;
     margin: 0;
-    padding: 0
+    padding: 0;
+    position: relative;
 }
 
 .nav a {
-    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
-    padding: 8px 10px;
-    border-radius: 6px
-}
-
-.nav a.active::after {
-    content: '';
-    position: absolute;
+    color: #FFC46A;
+    padding: 10px;
     display: block;
-    width: 8px;
-    height: 8px;
-    background: var(--accent-2);
-    border-radius: 50%;
-    margin-top: 22px
 }
 
-.actions .btn.small {
-    background: var(--accent-2);
-    border: 0;
-    padding: 8px 12px;
-    border-radius: 12px;
-    color: var(--green);
-    cursor: pointer
+.nav li {
+    position: relative;
 }
 
-/* layout helpers */
-.hero {
-    padding: 28px 0
+
+li a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ff6600;
+    transition: width 0.3s ease;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
+/* Giữ underline cho trang đang đứng */
+li a.active::after {
+    width: 100%;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3E5526;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+}
+
+.dropdown li a {
+    padding: 10px;
+    color: rgb(195, 237, 6);
+}
+
+.nav li:hover .dropdown {
+    display: block;
+}
+
+.net_tiengviet {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.icon_net {
+    width: 20px;
+    height: 20px;
+
+}
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffd88a;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.language-selector:hover .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #333333;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.language-dropdown li a:hover {
+    background: #43750f;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    /* hoặc chiều cao menu của bạn */
+}
+
+.language-toggle img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+}
+
+.language-toggle p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* phần report*/
+.report {
+    width: 1, 200px;
+    height: 571px;
+    top: 182px;
+    left: 130px;
 }
 
 .report-hero {
-    padding: 48px 0 36px;
-    background: linear-gradient(180deg, #f6f3ea, #f6f3ea)
+    padding: 100px 0 24px;
+    /* add top spacing to match taller header */
+    background: #f6f3ea;
 }
 
 .hero-grid {
@@ -121,16 +239,52 @@ body {
     align-items: center
 }
 
-.btn {
-    display: inline-block;
-    background: #d35400;
-    color: #fff;
-    padding: 10px 18px;
-    text-decoration: none;
-    border-radius: 10px
+.hero-left {
+    background: #fff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .06)
 }
 
-/* collage defaults */
+.hero-left h2 {
+    margin: 0 0 8px;
+    font-size: 28px
+}
+
+.hero-left p {
+    color: var(--muted);
+    margin: 0 0 18px
+}
+
+.lg {
+    background: #FFC46A;
+    color: #3E5526;
+    padding: 10px 16px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none
+}
+
+.rp {
+    background: #b50606;
+    color: #000000;
+    padding: 10px 16px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none
+}
+
+
+.lg:hover {
+    border-color: rgb(255, 255, 255);
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+.rp:hover {
+    border-color: rgb(255, 255, 255);
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
 .collage-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -145,88 +299,161 @@ body {
     border-radius: 12px
 }
 
-/* contact card basics */
+.collage-grid .big {
+    grid-row: 1/3;
+    border-radius: 14px
+}
+
+/* tao cũng chả biết này là phần gì =))*/
+
+
 .contact-card {
-    padding: 36px 0;
-    background: transparent
+    background: #f0e2c7;
+    width: 1, 440px;
+    height: 628px;
+    top: 844px;
+    left: -15px;
+    padding: 150px 0
 }
 
 .card-grid {
     display: grid;
     grid-template-columns: 360px 1fr;
-    gap: 24px;
+    gap: 28px;
     align-items: center
 }
 
 .card-image img {
     width: 100%;
-    border-radius: 10px
+    border-radius: 22px;
+    margin: 36px;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.card-image img:hover {
+    width: 100%;
+    border-radius: 22px;
+    margin: 36px;
+    transform: scale(1.1);
 }
 
 .card-content h3 {
-    font-size: 24px
+    font-size: 26px;
+    margin: 0px;
 }
 
-.muted {
-    color: white;
+.card-content {
+    margin-left: 55px;
+}
+
+.card-content p {
+    margin: 6px;
+    color: var(--muted);
+    line-height: 1.6;
+
+}
+
+.card-content p strong {
+    display: inline-block;
+    width: 90px
+}
+
+.card-content a {
+    color: #103b18;
+    font-weight: 700;
+    text-decoration: underline
+}
+
+
+/* footer*/
+.logo_ft {
+    position: relative;
+    height: 85px;
+    width: 156px;
+    top: 0px;
+    left: 122px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 22px;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.dlt_nut {
+    width: 240px;
+    list-style: none;
+    color: #FFFFFF;
+}
+
+.brand-block {
+    width: 302px;
+}
+
+.site-footer {
+    width: 1, 437px;
+    height: 186px;
+    top: 1472px;
+    left: 3px;
 }
 
 .note_thanks {
-    width: 300px;
-    height: auto;
+    position: relative;
+    margin-top: 5px;
+    left: 122px;
+    padding: 0px 0px 0px 0px;
 }
 
-/* footer */
 .site-footer.dark {
-    background: #26421f;
+    background: #13460D;
     color: #fff;
     padding: 28px 0
+}
+
+.note_thanks {
+    font-size: 14px;
+    color: #FFC46A;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 1fr auto auto;
-    gap: 18px;
-    align-items: start
+    gap: 18px
 }
 
 .footer-grid a {
-    color: var(--accent-2);
+    color: #FFFFFF;
     text-decoration: none
 }
 
-.footer__icons {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    /* 3 cột cho 3 icon */
-    justify-content: center;
-    gap: 2rem;
-}
-
-.iconfooter {
+.social {
     display: flex;
-    /* Kích hoạt Flexbox */
-    justify-content: center;
-    /* Căn giữa các ảnh */
     align-items: center;
-    /* Căn giữa theo chiều dọc */
-    gap: 20px;
-    /* Khoảng cách giữa các ảnh */
+    gap: 22px;
 }
 
-.links {
-    display: flex;
-    gap: 20px;
+.inconfooter {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform: scale(1);
 }
 
-.iconfooter img {
-    width: 10px;
-    height: 10px;
+.inconfooter:hover {
+    display: inline-block;
+    gap: 222px;
+    transition: transform 0.3s ease;
+    transform: scale(1.5);
 }
 
 
-/* responsive */
-@media(max-width:900px) {
+@media(max-width:880px) {
     .hero-grid {
         grid-template-columns: 1fr
     }
@@ -238,6 +465,10 @@ body {
     .collage-grid {
         grid-template-columns: 1fr 1fr
     }
+
+    .collage-grid .big {
+        grid-row: auto
+    }
 }
 
 @media(max-width:640px) {
@@ -245,7 +476,10 @@ body {
         display: none
     }
 
-    body {
-        padding-top: 56px
+    .topbar-inner {
+        padding: 0 12px;
+        height: 56px
     }
 }
+
+/*  test css trước */
