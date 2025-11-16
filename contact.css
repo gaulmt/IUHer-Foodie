@@ -10,6 +10,20 @@
 
 /* phần header */
 
+.lg {
+    background: #FFC46A;
+    color: #3E5526;
+    padding: 10px 16px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none
+}
+
+.lg:hover {
+    border-color: rgb(255, 255, 255);
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
 .logo {
     position: relative;
     height: 85px;
@@ -219,90 +233,112 @@ li a.active::after {
 }
 
 /* phần report*/
-.report {
-    width: 1, 200px;
-    height: 571px;
-    top: 182px;
-    left: 130px;
-}
 
-.report-hero {
-    padding: 100px 0 24px;
-    /* add top spacing to match taller header */
-    background: #f6f3ea;
-}
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: center
-}
-
-.hero-left {
-    background: #fff;
-    padding: 28px;
-    border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, .06)
-}
-
-.hero-left h2 {
-    margin: 0 0 8px;
-    font-size: 28px
-}
-
-.hero-left p {
-    color: var(--muted);
-    margin: 0 0 18px
-}
-
-.lg {
-    background: #FFC46A;
-    color: #3E5526;
+/* Nút */
+.btn_rp {
+    background: #c30909;
+    color: #000;
+    border-radius: 16px;
     padding: 10px 16px;
-    border-radius: 8px;
     display: inline-block;
-    text-decoration: none
+    text-decoration: none;
+    margin-top: 16px;
 }
 
-.rp {
-    background: #b50606;
-    color: #000000;
-    padding: 10px 16px;
-    border-radius: 8px;
-    display: inline-block;
-    text-decoration: none
+.btn_rp:hover {
+    color: #fff;
+    transform: perspective(400px) scale3d(1.044, 1.044, 1) translateZ(0);
 }
 
-
-.lg:hover {
-    border-color: rgb(255, 255, 255);
-    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
-}
-
-.rp:hover {
-    border-color: rgb(255, 255, 255);
-    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
-}
-
-.collage-grid {
+/* Grid container: 4 cột, 2 hàng như layout mẫu */
+.container_rp {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 12px
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /* 4 cột */
+    grid-template-rows: 1fr 300px;
+    /* 2 hàng */
+    gap: 10px;
+    align-items: stretch;
+    osition: relative
 }
 
-.collage-grid img {
+/* Hero chiếm cột 1-2,  hàng 1*/
+.hero_left {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    margin-left: 54px;
+    margin-top: 10px;
+    width: 93%;
+}
+
+/* Ảnh dài ngang: 
+ * 
+ * iếm cột 1-2 ở hàng 2 */
+.anh_dai_ngang {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    width: 90%;
+    margin: 50px;
+    margin-top: 0px;
+    border-radius: 22px;
+    height: 80%;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.anh_dai_ngang:hover {
+    transform: scale(1.1);
+}
+
+/* Ảnh dọc: cột 4, cả 2 hàng */
+.anh_dai_doc {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px
+    border-radius: 22px;
+    height: 87%;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+    transform: scale(1);
 }
 
-.collage-grid .big {
-    grid-row: 1/3;
-    border-radius: 14px
+.anh_dai_doc:hover {
+    transform: scale(1.1);
 }
+
+/* Ảnh nhỏ 1: cột 2-3 ở hàng 2 (nằm dưới ảnh dài ngang) */
+.anh_nho_1 {
+    margin-top: 10px;
+    grid-column: 4 / 5;
+    grid-row: 1/ 2;
+    border-radius: 22px;
+    width: 100%;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.anh_nho_1:hover {
+    transform: scale(1.1);
+}
+
+/* Ảnh nhỏ 2: cột 3 ở hàng 2 */
+.anh_nho_2 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    border-radius: 22px;
+    width: 100%;
+    height: 80%;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.anh_nho_2:hover {
+    transform: scale(1.1);
+}
+
+
+
 
 /* tao cũng chả biết này là phần gì =))*/
 
@@ -483,3 +519,171 @@ li a.active::after {
 }
 
 /*  test css trước */
+
+/* From Uiverse.io by JaydipPrajapati1910 */
+.button {
+    --width: 300px;
+    --height: 50px;
+    margin-top: 20px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #c90909;
+    --tooltip-color: #030303;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+    cursor: pointer;
+
+}
+
+.button::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: #000000;
+    font-size: 0.9rem;
+    color: #ffffff;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+    cursor: pointer;
+
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #000000;
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+    cursor: pointer;
+
+}
+
+.button::after,
+.button::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.button-wrapper,
+.text,
+.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.text {
+    top: 0
+}
+
+.text,
+.icon {
+    transition: top 0.5s;
+}
+
+.icon {
+    color: #000000;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.button:hover {
+    background: #efd005;
+    cursor: pointer;
+
+}
+
+.button:hover .text {
+    top: -100%;
+}
+
+.button:hover .icon {
+    top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+
+/*  test css login */
+
+.btn-login {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #FFC46A, #FFC46A);
+    color: #3E5526;
+    border-radius: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.529);
+}
+
+.btn-login .icon {
+    width: 20px;
+    height: auto;
+    transition: transform 0.3s ease;
+    display: inline;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #FFC46A, #FFC46A);
+    box-shadow: 0 6px 18px rgba(142, 242, 12, 0.574);
+    transform: translateY(-2px);
+    height: auto;
+}
+
+.btn-login:hover .icon {
+    transform: translateX(4px);
+    display: inline;
+}
