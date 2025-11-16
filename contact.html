@@ -31,11 +31,34 @@
                     </li>
                 </ul>
             </nav>
-            <div>
+            <!-- Mobile controls: hamburger + login grouped -->
+            <div class="mobile-controls">
+                <div class="hamburger-menu">
+                    <button class="hamburger-btn" id="hamburgerBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="hamburger-dropdown" id="hamburgerDropdown">
+                        <li><a href="home.html">Trang chủ</a></li>
+                        <li><a href="explore.html">Khám phá</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <!-- Language selector for mobile (between hamburger and login) -->
+                <div class="language-selector mobile-lang-selector">
+                    <div class="language-toggle">
+                        <img class="icon_net" src="icon_internet.png" alt="icon internet" />
+                        <p style="color: #FFC46A; margin: 0; font-size: 13px;">Tiếng Việt ▼</p>
+                    </div>
+                    <ul class="language-dropdown">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">中文</a></li>
+                    </ul>
+                </div>
                 <a href="#" class="btn-login lg">
                     <span>Đăng nhập</span>
                 </a>
-
             </div>
         </div>
     </header>
@@ -104,28 +127,32 @@
 
     <footer class="site-footer dark">
         <div class="container footer-grid">
-            <div class="brand-block">
-                <img class="logo_ft" src="./logo.png">
-                <p class="note_thanks">Cảm ơn bạn đã dừng chân tại web site của chúng tớ, chúc các bạn kiếm được
-                    những món ăn thật sự phù hợp. Nhớ để lại bình luận nha !!
-                </p>
+            <div class="footer-left">
+                <div class="brand-block">
+                    <img class="logo_ft" src="./logo.png">
+                    <p class="note_thanks">Cảm ơn bạn đã dừng chân tại web site của chúng tớ, chúc các bạn kiếm được
+                        những món ăn thật sự phù hợp. Nhớ để lại bình luận nha !!
+                    </p>
+                </div>
+                <div class="links">
+                    <div class="column left">
+                        <ul>
+                            <li class="dlt_nut" style="color:#FFC46A ;">Trang chủ</li>
+                            <li class="dlt_nut white"><a href="#">Quán ăn mới</a></li>
+                            <li class="dlt_nut white"><a href="#">Top đánh giá</a></li>
+                        </ul>
+                    </div>
+                    <div class="column right">
+                        <ul>
+                            <li style="color: #FFC46A;" class="dlt_nut">Hỗ Trợ</li>
+                            <li class="dlt_nut white"><a href="#">Trung tâm trợ giúp</a></li>
+                            <li class="dlt_nut white"><a href="#">Báo cáo</a></li>
+                            <li class="dlt_nut white"><a href="#">Về chúng tôi</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="links">
-                <div class="column left">
-                    <ul>
-                        <li class="dlt_nut" style="color:#FFC46A ;">Trang chủ</li>
-                        <li class="dlt_nut white"><a href="#">Quán ăn mới</a></li>
-                        <li class="dlt_nut white"><a href="#">Top đánh giá</a></li>
-                    </ul>
-                </div>
-                <div class="column right">
-                    <ul>
-                        <li style="color: #FFC46A;" class="dlt_nut">Hỗ Trợ</li>
-                        <li class="dlt_nut white"><a href="#">Trung tâm trợ giúp</a></li>
-                        <li class="dlt_nut white"><a href="#">Báo cáo</a></li>
-                        <li class="dlt_nut white"><a href="#">Về chúng tôi</a></li>
-                    </ul>
-                </div>
+            <div class="footer-right">
             </div>
             <div class="social">
                 <p>Liên hệ với chúng tôi:</p>
@@ -140,6 +167,32 @@
     </footer>
 
     <script src="javasdaript.js"></script>
+    <script>
+        // Hamburger menu toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const hamburgerDropdown = document.getElementById('hamburgerDropdown');
+
+        if (hamburgerBtn) {
+            hamburgerBtn.addEventListener('click', function () {
+                hamburgerDropdown.classList.toggle('active');
+            });
+
+            // Close dropdown when clicking on a link
+            const hamburgerLinks = hamburgerDropdown.querySelectorAll('a');
+            hamburgerLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    hamburgerDropdown.classList.remove('active');
+                });
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('.hamburger-menu')) {
+                    hamburgerDropdown.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

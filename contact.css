@@ -43,7 +43,8 @@
     --green: #3E5526;
     --accent: #ffd88a;
     --muted: #6b6b6b;
-    --topbar-h: 96px;
+    --topbar-h: 80px;
+    /* reduced header height */
 }
 
 
@@ -58,8 +59,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    width: 1, 440px;
-    height: 100px;
+    width: 100%;
+    height: var(--topbar-h);
     z-index: 20;
 }
 
@@ -149,6 +150,67 @@ li a.active::after {
     display: block;
 }
 
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    position: relative;
+}
+
+.hamburger-menu {
+    order: 2;
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: #FFC46A;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+    font-size: 24px;
+}
+
+.hamburger-btn span {
+    width: 24px;
+    height: 3px;
+    background-color: #FFC46A;
+    display: block;
+    transition: 0.3s;
+}
+
+.hamburger-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #3E5526;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 150px;
+    border-radius: 8px;
+    margin-top: 8px;
+    z-index: 30;
+}
+
+.hamburger-dropdown.active {
+    display: block;
+}
+
+.hamburger-dropdown li a {
+    display: block;
+    color: #FFC46A;
+    text-decoration: none;
+    padding: 10px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-dropdown li a:hover {
+    background-color: rgba(255, 196, 106, 0.1);
+}
+
 .net_tiengviet {
     display: flex;
     align-items: center;
@@ -165,6 +227,11 @@ li a.active::after {
     position: relative;
     display: inline-block;
     cursor: pointer;
+}
+
+.mobile-lang-selector {
+    display: none !important;
+    /* hidden on desktop, shown on mobile via media query */
 }
 
 .language-toggle {
@@ -260,7 +327,7 @@ li a.active::after {
     /* 2 hàng */
     gap: 10px;
     align-items: stretch;
-    osition: relative
+    position: relative;
 }
 
 /* Hero chiếm cột 1-2,  hàng 1*/
@@ -345,11 +412,9 @@ li a.active::after {
 
 .contact-card {
     background: #f0e2c7;
-    width: 1, 440px;
+    width: 100%;
     height: 628px;
-    top: 844px;
-    left: -15px;
-    padding: 150px 0
+    padding: 60px 0;
 }
 
 .card-grid {
@@ -434,10 +499,12 @@ li a.active::after {
 }
 
 .site-footer {
-    width: 1, 437px;
-    height: 186px;
-    top: 1472px;
-    left: 3px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: auto;
+    left: auto;
 }
 
 .note_thanks {
@@ -462,6 +529,14 @@ li a.active::after {
     display: grid;
     grid-template-columns: 1fr auto auto;
     gap: 18px
+}
+
+.footer-left {
+    display: contents;
+}
+
+.footer-right {
+    display: contents;
 }
 
 .footer-grid a {
@@ -489,32 +564,517 @@ li a.active::after {
 }
 
 
-@media(max-width:880px) {
-    .hero-grid {
-        grid-template-columns: 1fr
+/* Tablet: 768px - 1024px */
+@media(max-width:1024px) {
+    :root {
+        --topbar-h: 75px;
     }
 
-    .card-grid {
-        grid-template-columns: 1fr
+    body {
+        padding-top: 75px;
     }
 
-    .collage-grid {
-        grid-template-columns: 1fr 1fr
-    }
-
-    .collage-grid .big {
-        grid-row: auto
-    }
-}
-
-@media(max-width:640px) {
-    .nav {
-        display: none
+    .logo {
+        height: 60px;
+        width: 110px;
+        left: 40px;
     }
 
     .topbar-inner {
+        height: 75px;
+    }
+
+    .btn-login.lg {
+        order: 3;
+        margin-left: 6px;
+    }
+
+    .container_rp {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 250px 250px;
+        gap: 8px;
+    }
+
+    .hero_left {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        margin-left: 15px;
+        width: 90%;
+    }
+
+    .anh_dai_doc {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+        width: 100%;
+        height: 100%;
+    }
+
+    .anh_dai_ngang {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        width: 85%;
+        height: 100%;
+        margin: 10px;
+    }
+
+    .anh_nho_1 {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        height: 100%;
+    }
+
+    .anh_nho_2 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        height: 100%;
+    }
+
+    .card-grid {
+        grid-template-columns: 260px 1fr;
+        gap: 16px;
+    }
+
+    .card-image img {
+        margin: 12px;
+    }
+
+    .card-content {
+        margin-left: 15px;
+    }
+
+    .card-content h3 {
+        font-size: 22px;
+    }
+
+    .logo_ft {
+        height: 60px;
+        width: 110px;
+        left: 60px;
+    }
+
+    .nav {
+        gap: 14px;
+    }
+}
+
+/* Mobile: < 768px */
+@media(max-width:768px) {
+    :root {
+        --topbar-h: 65px;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        padding-top: 65px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        /* prevent horizontal swipe on mobile */
+        max-width: 100%;
+    }
+
+    main {
+        flex: 0 0 auto;
+    }
+
+    /* Hide regular nav, show mobile controls */
+    nav {
+        display: none !important;
+    }
+
+    .mobile-controls {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        /* sit directly after logo */
+        gap: 6px;
+    }
+
+    /* small extra spacing between logo and hamburger */
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+        margin-left: 6px;
+    }
+
+    /* Show language selector in mobile controls (between hamburger and login) */
+    .mobile-lang-selector {
+        display: flex !important;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .mobile-lang-selector .language-toggle {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        height: auto;
+    }
+
+    .mobile-lang-selector .language-toggle img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .mobile-lang-selector .language-toggle p {
+        color: #FFC46A;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .mobile-controls .language-toggle img.icon_net {
+        width: 18px;
+        height: 18px;
+    }
+
+    .mobile-lang-selector .language-dropdown {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        background: #ffd88a;
+        list-style: none;
+        padding: 8px 0;
+        margin: 0;
+        min-width: 100px;
+        border-radius: 6px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: all 0.3s ease;
+        z-index: 30;
+    }
+
+    .mobile-lang-selector:hover .language-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .mobile-lang-selector .language-dropdown li a {
+        display: block;
+        padding: 8px 12px;
+        color: #333;
+        text-decoration: none;
+        font-size: 13px;
+        transition: background 0.2s ease;
+    }
+
+    .mobile-lang-selector .language-dropdown li a:hover {
+        background: #ffcc5a;
+    }
+
+
+    .site-footer.dark {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px 0;
+        width: 100%;
+    }
+
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
         padding: 0 12px;
-        height: 56px
+        box-sizing: border-box;
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        order: 1;
+    }
+
+    .footer-right {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row !important;
+        gap: 0 !important;
+    }
+
+    .links .column {
+        flex: 1;
+    }
+
+    .links .column ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        list-style: none;
+        padding: 0;
+    }
+
+    .social {
+        flex-direction: row !important;
+        gap: 12px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 10px;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        width: calc(100% - 10px);
+        order: 3;
+    }
+
+    .social p {
+        font-size: 13px;
+        margin: 0;
+        color: #FFFFFF;
+    }
+
+    .logo {
+        height: 50px;
+        width: 90px;
+        left: auto;
+        margin-left: 8px;
+    }
+
+    .topbar-inner {
+        padding: 0 8px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* logo then controls */
+        gap: 8px;
+    }
+
+    .topbar.dark {
+        height: 65px;
+    }
+
+    .lg {
+        padding: 6px 10px;
+        font-size: 11px;
+        margin-left: 10px;
+    }
+
+    .container_rp {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto auto;
+        gap: 6px;
+        padding: 0 8px;
+    }
+
+    .hero_left {
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 0;
+        width: 70%;
+    }
+
+    .hero_left h2 {
+        font-size: 18px;
+    }
+
+    .hero_left p {
+        font-size: 13px;
+    }
+
+    .button {
+        --width: 180px;
+        --height: 36px;
+        margin-top: 10px;
+    }
+
+    .anh_dai_doc {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 0%;
+        height: 0;
+        margin: 0;
+        display: none;
+    }
+
+    .anh_dai_ngang {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: none;
+    }
+
+    .anh_nho_1 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        width: 0;
+        height: 0;
+        margin: 0;
+        display: none;
+    }
+
+    .anh_nho_2 {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        width: 200px;
+        height: 140px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    .contact-card {
+        padding: 30px 0;
+        min-height: auto;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card-image img {
+        width: 80%;
+        margin-left: 15px;
+        border-radius: 14px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        margin-left: 8px;
+        padding: 0 8px;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .card-content p {
+        font-size: 13px;
+        margin: 3px 0;
+    }
+
+    .card-content p strong {
+        display: block;
+        width: auto;
+        margin-bottom: 3px;
+    }
+
+    .brand-block {
+        display: none;
+    }
+
+    .logo_ft {
+        display: none;
+    }
+
+    .note_thanks {
+        display: none;
+    }
+
+    /* Ensure social icons sit at bottom of footer right column */
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+
+    .footer-right .social {
+        margin-top: auto;
+        align-self: center;
+        align-items: center;
+    }
+
+    .footer-right .social a {
+        display: inline-block;
+        margin: 6px 0;
+    }
+
+    .inconfooter {
+        max-width: 40px !important;
+        max-height: 40px !important;
+    }
+
+    .site-footer.dark {
+        overflow: hidden;
+    }
+}
+
+/* Small mobile: < 480px */
+@media(max-width:480px) {
+    .logo {
+        height: 50px;
+        width: 85px;
+        left: 10px;
+    }
+
+    .topbar-inner {
+        padding: 0 8px;
+        height: 70px;
+    }
+
+    .topbar.dark {
+        height: 70px;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+
+    .nav {
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .hero_left {
+        margin-left: 8px;
+    }
+
+    .hero_left h2 {
+        font-size: 18px;
+    }
+
+    .button {
+        --width: 160px;
+        --height: 36px;
+    }
+
+    .container_rp {
+        grid-template-columns: 1fr;
+    }
+
+    .anh_dai_doc,
+    .anh_dai_ngang,
+    .anh_nho_1,
+    .anh_nho_2 {
+        grid-column: 1 !important;
+        width: 95% !important;
+    }
+
+    .card-content {
+        margin-left: 8px;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+    }
+
+    .note_thanks {
+        left: 8px;
+        font-size: 11px;
+    }
+
+    .logo_ft {
+        height: 50px;
+        width: 85px;
+        left: 8px;
     }
 }
 
