@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    font-family: 'Be Vietnam Pro';
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    margin: 0;
+    background-color: #ffffeb;
+}
+
+/* Header */
+.header{
+    padding-top: 15px;
+    width: 100%;
+    background-color: #3E5526;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Hero section */
+.hero-section{
+    width: 100%;
+    padding: 68px 0 40px 0;
+    display: flex;
+    justify-content: center;
+}
+.hero-section-container{
+    width: 90%;
+    max-width: 1220px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 45px;
+}
+.hero-section-container-top{
+    width: 100%;
+    display: flex;
+    gap: 61px;
+    padding: 65px 54px 0 54px;
+    border-radius: 45px 45px 0 24px;
+    background-color: #FFC46A30;
+}
+.hero-section-container-top-content{
+    width: 100%;
+    max-width: 524px;
+    padding-bottom: 64px;
+    flex-shrink: 1;
+}
+.hero-section-container-top-content-tittle{
+    font-family: 'Be Vietnam Pro';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 50px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+.hero-section-container-top-content-tittle span{
+    color: #AB2A02;
+}
+.hero-section-container-top-content-text{
+    margin-top: 34px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    font-family: Inter;
+    color: #000000;
+}
+.hero-section-container-top-img{
+    width: 100%;
+    height: auto;
+    flex-shrink: 1;
+}
+.hero-section-container-top-img img{
+    width: 100%;
+    height: 100%;
+}
+.hero-section-container-top-content-bottom{
+    width: 100%;
+    display: flex;
+}
+.hero-section-container-top-content-bottom-button{
+    width: fit-content;
+    height: fit-content;
+    padding: 19px 17px 0 0;
+    position: relative;
+    background-color: #ffffeb;
+}
+.hero-section-container-top-content-bottom-button-boder{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.hero-section-container-top-content-bottom-button-explore{
+    display: inline-block;
+    width: 409px;
+    min-height: 99px;
+    box-shadow: 0px 0px 18.3px 6px #00000040;
+    background-color: #3E5526;
+    border-radius: 24px 29px 24px 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 38px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFC46A;
+}
+.hero-section-container-top-content-bottom-background-right{
+    width: 100%;
+    height: 100%;
+    background-color: #FFC46A30;
+    border-radius: 0 0 45px 24px;
+}
+
+/* Phần hướng dẫn */
+.guide{
+    width: 100%;
+    padding: 29px 0 62px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #FFC46A26;
+}
+.guide-content{
+    width: 90%;
+    max-width: 1156px;
+}
+.guide-content-tittle{
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 85px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+}
+.guide-content-text{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
+}
+.guide-content-container{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.guide-content-container-box{
+    width: 100%;
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.guide-content-container-box-img{
+    width: 100%;
+    height: 332px;
+    object-fit: cover;
+    border-radius: 23px;
+    box-shadow: 0px 0px 22.2px 0px #13460D40;
+}
+.guide-content-container-box-tittle{
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+}
+.guide-content-container-box-text{
+    font-weight: 300;
+    font-style: Light;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+}
+.guide-box2{
+    margin-top: 16px;
+}
+.guide-box2 .guide-content-container-box-tittle{
+    order: 1;
+}
+.guide-box2 .guide-content-container-box-text{
+    order: 2;
+}
+.guide-box2 .guide-content-container-box-img{
+    order: 3;
+}
+
+/* Phần phản hồi của người dùng */
+:root {
+    --card-width: 600px;
+    --card-height: 300px;
+    --gap-x: 100px; 
+    --gap-z: 150px; 
+    --bg-color: #FEF7E6;
+}
+
+.feedback {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(255, 255, 235, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-feedback {
+    width: 100%;
+    max-width: 1220px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 45px;
+}
+.main-title {
+    font-family: 'Be Vietnam Pro';
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+    width: 100%;
+    height: auto;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1220px;
+    justify-content: center;
+}
+
+.carousel-display {
+    width: var(--card-width);
+    height: var(--card-height);
+    perspective: 1220px; 
+    position: relative;
+    margin: 0 80px;
+}
+
+.carousel-items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    left: 0;
+    top: 0;
+}
+
+.carousel-item {
+    position: absolute;
+    width: var(--card-width);
+    height: var(--card-height);
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+    transition: transform 0.5s ease-in-out, 
+                opacity 0.5s ease-in-out,
+                box-shadow 0.5s ease-in-out;
+    
+    opacity: 0; 
+    pointer-events: none; 
+    z-index: 1; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.box-top-feedback {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.avt-feedback {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.right-box-feedback {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mini-title-feedback {
+    width: 100%;
+    height: auto;
+    font-weight: 700;
+    font-size: 32px;
+    font-family: 'Be Vietnam Pro';
+}
+.mini-text-feedback {
+    font-family: 'Be Vietnam Pro';
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.box-bottom-feedback {
+    width: 90%;
+    height: auto;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* --- ĐỊNH DẠNG VỊ TRÍ 3D --- */
+
+.carousel-item.center {
+    transform: translateX(0) translateZ(0) scale(1.05); /* Giữ kích thước gần như ban đầu */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+    z-index: 3; 
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-item.left {
+    transform: translateX(calc(-1 * var(--gap-x))) 
+               rotateY(10deg) 
+               translateZ(calc(-1 * var(--gap-z))); 
+    z-index: 2; 
+    opacity: 0.6; /* Mờ hơn */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+.carousel-item.right {
+    transform: translateX(var(--gap-x)) 
+               rotateY(-10deg) 
+               translateZ(calc(-1 * var(--gap-z)));
+    z-index: 2; 
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+/* --- NÚT ĐIỀU HƯỚNG --- */
+.nav-btn {
+    z-index: 10; 
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #333;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav-btn:hover {
+    background-color: #3E5526;
+    color:#FEF7E6;
+}
