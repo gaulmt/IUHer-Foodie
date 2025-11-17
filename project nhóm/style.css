@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;800&family=Fredoka:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fcfcf4;
+    font-family: 'Be Vietnam Pro', Arial, sans-serif;
+}
+/* đầu */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100px;
+    background-color: #3E5526;
+    color: #ffc46a;
+    border-radius: 10px;
+    padding: 10px 20px;
+    gap: 20px;
+}
+.img {
+    width: 156px;
+    height: 85px;
+    flex-shrink: 0;
+}
+
+.head,
+.user-section {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 30px;
+}
+.head {
+    gap: 100px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-item {
+    white-space: nowrap;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #ffc46a;
+    display: block;
+}
+.nav-trangchu a {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+.nav-khampha a {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+.nav-lienhe a {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+.nav-language a {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center; 
+    gap: 5px;
+}
+.nav-user a {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #FFC46A;
+    color: #3E5526;
+    border-radius: 8px;
+}
+.menu-icon{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 15px;
+    height: 20px;
+    color: #ffb006;
+    cursor: pointer;
+    background-color: #3E5526;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+.menu-icon span{
+    display: block;
+    border-radius: 3px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffb006;
+}
+.body-1{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #FBF9F1;
+}
+.avata{
+    flex: 3;
+    width: 100%;
+    max-width: 813px;
+    height: auto;
+    min-width: 300px;
+}
+.content{
+    flex: 2;
+    align-items: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #000000;
+    min-width: 300px;
+    max-width: 587px;
+    text-align: center;
+}
+.content h2{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+.content p{
+    font-weight: 500; 
+    font-size: 24px; 
+    line-height: 40px;
+}
+/* thân */
+.body-2{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+.body-2 h2 {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+    color: #000000;
+}
+.mission-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 20px 40px 20px;
+}
+.card-item{
+    position: relative;
+    max-width: 317px;
+    background-color: rgba(255, 196, 138, 0.51);
+    border-radius: 30px;
+    text-align: center;
+    padding: 60px 25px 25px 25px;
+    box-shadow: 4px 2px 7.8px 2px rgba(19, 70, 13, 0.25), 
+                0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.card-number {
+    position: absolute;
+    top: -48px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px;
+    height: 96px;
+    background-color: #3E5526;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.card-item h3 {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700; 
+    font-size: 22px;
+    line-height: 45px;
+    color: #582600; 
+    letter-spacing: 0.04em; 
+    margin-bottom: 10px;
+}
+.card-item p {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 300; 
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000; 
+    letter-spacing: 0.04em; 
+}
+/* chân */
+.footer{
+    background-color: #3E5526;
+    display: flex;
+    color: #FFC46A;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 30px;
+    margin-top: 50px;
+}
+.footer-col{
+    flex: 1;
+    min-width: 250px;
+    list-style: none;
+}
+.footer-info p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #FFC46A;
+    max-width: 302px;
+    font-weight: 400;
+}
+.footer-logo{
+    width: 156px;
+    height: 85px;
+    margin-bottom: 15px;
+}
+.footer-links h4{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight:  500;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #FFC46A;
+}
+.footer-links ul {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 12px;
+}
+.footer-links a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.2;
+    text-decoration: none;
+}
+.footer-social h4{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFC46A;
+    margin-bottom: 20px;
+}
+.social-icons{
+    display: flex;
+    gap: 5px;
+}
+.social-icons img{
+     width: 50px;
+    height: 50px;
+    object-fit: contain; /*ko bị méo ảnh */
+}
+.footer-social a:hover img{
+    opacity: 0.8;
+}
+@media (max-width: 992px) {
+    .container {
+        justify-content: center;
+        margin: 15px 0;
+    }
+    .head {
+        width: 100%;
+        justify-content: center;
+        order: 3;
+        display: flex;
+    }
+    .img {
+        order: 1;
+    }
+    .user-section {
+        display: flex;
+        order: 2;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        align-items: center;
+        margin: 0px;
+        justify-content: space-between;
+        border-radius: 0px;
+    }
+    .img {
+        order: 1;
+    }
+    .head {
+        display: none;
+    }
+    .user-section {
+        display: none;
+        order: 3;
+    }
+    .menu-icon{
+        display: flex;
+        order: 3;
+    }
+    .head.active,
+    .user-section.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #3E5526; 
+        position: absolute; 
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+        gap: 20px;
+    }
+    .head.active {
+        top: 100px; 
+        order: 4;
+    }
+    .user-section.active {
+        top: 230px;
+        order: 5;
+    }
+    .body-1{
+        flex-direction: column;
+    }
+    .mission-section {
+        flex-direction: column;
+        align-items: center; 
+        gap: 70px; 
+    }
+    .card-item {
+        min-width: 300px;
+    }
+}
