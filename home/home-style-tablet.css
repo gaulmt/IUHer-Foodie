@@ -1,0 +1,69 @@
+@media(max-width:1024px){
+    /* Hero section */
+    .hero-section{
+        padding: 91px 0 82px 0;
+    }
+    .hero-section-container{
+        max-width: 795px;
+    }
+    .hero-section-container-top{
+        flex-direction: column;
+        gap: 21px;
+        padding: 85px 72px 0 72px;
+        align-items: center;
+    }
+    .hero-section-container-top-content{
+        max-width: fit-content;
+        padding: 0;
+    }
+    .hero-section-container-top-content-tittle{
+        text-align: center;
+    }
+    .hero-section-container-top-img{
+        max-width: 398px;
+    }
+    .hero-section-container-top-content-bottom-button{
+        padding: 15px 10px 0 0;
+    }
+    .hero-section-container-top-content-bottom-button-explore{
+        width: 267px;
+        height: 106px;
+        font-size: 26px;
+    }
+
+    /* Phần hướng dẫn */
+    .guide{
+        padding: 29px 0 68px 0;
+    }
+    .guide-content{
+        max-width: 830px;
+    }
+    .guide-content-tittle{
+        line-height: 46px;
+        padding: 0 30px;
+    }
+    .guide-content-text{
+        margin-top: 10px;
+    }
+    .guide-content-container{
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-around;
+    }
+    .guide-box2 .guide-content-container-box-tittle{
+        order: 2;
+    }
+    .guide-box2 .guide-content-container-box-text{
+        order: 3;
+    }
+    .guide-box2 .guide-content-container-box-img{
+        order: 1;
+    }
+
+
+
+
+
+
+    
+}
