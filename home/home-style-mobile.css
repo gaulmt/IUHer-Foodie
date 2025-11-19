@@ -69,8 +69,18 @@
         line-height: 17px;
         margin-top: 0;
     }
+
+    /* Footer */
+    .footer-container{
+        max-width: 315px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
 }
 
+
+/* FEEDBACK */
 @media only screen and (max-width: 930px) {
     :root {
         --card-width: 400px;
@@ -455,4 +465,3 @@
         font-size: 13px;
 }
 }
-
