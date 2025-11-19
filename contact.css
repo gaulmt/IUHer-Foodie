@@ -1239,11 +1239,32 @@ li a.active::after {
         font-size: 11px;
     }
 
-    .logo_ft {
-        height: 50px;
-        width: 85px;
+    .lg_ft {
+        height: auto;
+        width: 125px;
         left: 8px;
+        margin-left: 12%;
+
     }
+
+    .n_t {
+        font-size: 14px;
+        margin-left: 12%;
+        margin-right: 20%;
+        color: #FFC46A;
+    }
+
+    .site-footer,
+    .footer-left,
+    .footer-info,
+    .site-footer.dark {
+        display: none;
+    }
+
+    .ft_mb {
+        background-color: #13460D;
+    }
+
 }
 
 /*  test css trước */

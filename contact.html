@@ -171,33 +171,36 @@
             </div>
     </footer>
 
-    <script src="javasdaript.js"></script>
-    <script>
-        // Hamburger menu toggle
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const hamburgerDropdown = document.getElementById('hamburgerDropdown');
-
-        if (hamburgerBtn) {
-            hamburgerBtn.addEventListener('click', function () {
-                hamburgerDropdown.classList.toggle('active');
-            });
-
-            // Close dropdown when clicking on a link
-            const hamburgerLinks = hamburgerDropdown.querySelectorAll('a');
-            hamburgerLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    hamburgerDropdown.classList.remove('active');
-                });
-            });
-
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function (event) {
-                if (!event.target.closest('.hamburger-menu')) {
-                    hamburgerDropdown.classList.remove('active');
-                }
-            });
-        }
-    </script>
+    <!-- footer dành cho reponsive mobile-->
+    <footer>
+        <div class="ft_mb hdesk">
+            <div class="lg_notethanks">
+                <img class="lg_ft" src="./logo.png">
+                <p class="n_t" style="font-size: 14px;">Cảm ơn bạn đã dừng chân tại web site của
+                    chúng tớ, chúc các bạn kiếm
+                    được
+                    những món ăn thật sự phù hợp. Nhớ để lại bình luận nha !!
+                </p>
+            </div>
+            <div class="cum_mb">
+                <div class="links_mb">
+                    <div class="">
+                        <ul>
+                            <li class="dlt_nut white size20" style="color:#FFC46A ;">Trang chủ</li>
+                            <li class="dlt_nut white size20"><a href="#">Khám Phá</a></li>
+                            <li class="dlt_nut white size20"><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social">
+                    <a class="ytb" href="#"><img src="./youtube.png" alt="YouTube icon" /></a>
+                    <a class="int" href="#"><img src="./instagram.png" alt="Instagram icon" /></a>
+                    <a class="tw" href="#"><img src="./twitter.png" alt="Twitter icon" /></a>
+                    <a class="fb" href="#"><img src="./facebook.png" alt="Facebook icon" /></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
