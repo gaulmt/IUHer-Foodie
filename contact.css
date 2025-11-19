@@ -11,6 +11,18 @@ body {
     background-color: #FFFFF0;
 }
 
+.size20 {
+    font-size: 20px;
+}
+
+.size24 {
+    font-size: 24px;
+}
+
+.size40 {
+    font-size: 40px;
+}
+
 /* phần header */
 
 .lg {
@@ -431,6 +443,12 @@ li a.active::after {
     margin-top: auto;
 }
 
+.note_contact {
+    width: 700px;
+}
+
+
+
 .card-grid {
     display: grid;
     grid-template-columns: 360px 1fr;
@@ -439,7 +457,7 @@ li a.active::after {
 }
 
 .card-image img {
-    width: 100%;
+    width: 140%;
     border-radius: 22px;
     margin-left: 186px;
     transition: transform 0.3s ease;
@@ -447,7 +465,7 @@ li a.active::after {
 }
 
 .card-image img:hover {
-    width: 100%;
+    width: 140%;
     border-radius: 22px;
     margin-left: 186px;
     transform: scale(1.1);
@@ -455,7 +473,7 @@ li a.active::after {
 
 .card-content h3 {
     font-size: 26px;
-    margin: 0px;
+    margin-left: 120px;
 }
 
 .card-content {
@@ -466,6 +484,7 @@ li a.active::after {
     margin: 6px;
     color: var(--muted);
     line-height: 1.6;
+    margin-left: 120px;
 
 }
 
@@ -477,7 +496,9 @@ li a.active::after {
 .card-content a {
     color: #103b18;
     font-weight: 700;
-    text-decoration: underline
+    text-decoration: underline;
+    margin-left: 20px;
+
 }
 
 
@@ -526,7 +547,7 @@ li a.active::after {
     position: relative;
     margin-top: 18px;
     margin-left: 127px;
-    width: 305px;
+    width: 455px;
     padding: 0px 0px 0px 0px;
 }
 
@@ -583,6 +604,10 @@ li a.active::after {
     gap: 222px;
     transition: transform 0.3s ease;
     transform: scale(1.5);
+}
+
+.hdesk {
+    display: none;
 }
 
 
@@ -840,6 +865,10 @@ li a.active::after {
         padding: 0;
     }
 
+    .links .column.right {
+        display: none;
+    }
+
     .links .column ul {
         display: flex;
         flex-direction: column;
@@ -984,43 +1013,55 @@ li a.active::after {
         display: none;
     }
 
+    /* Mobile contact card adjustments (only for widths <450px) */
     .contact-card {
-        padding: 30px 0;
-        min-height: auto;
+        background: #FFC46A52;
+        width: 100%;
+        height: auto;
+        padding: 18px 12px;
+        box-sizing: border-box;
+        margin-top: 0;
     }
 
     .card-grid {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 12px;
+        align-items: start;
+        margin-left: 0;
     }
 
     .card-image img {
-        width: 80%;
-        margin-left: 15px;
-        border-radius: 14px;
-        height: 200px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 12px;
+        height: auto;
         object-fit: cover;
+        display: block;
+        padding: 0 6px;
     }
 
     .card-content {
-        margin-left: 8px;
-        padding: 0 8px;
+        margin: 0;
+        padding: 8px 6px 0 6px;
     }
 
     .card-content h3 {
         font-size: 18px;
-        margin-bottom: 6px;
+        margin: 0 0 6px 0;
     }
 
     .card-content p {
-        font-size: 13px;
-        margin: 3px 0;
+        font-size: 14px;
+        margin: 2px 0;
+        line-height: 1.5;
     }
 
     .card-content p strong {
-        display: block;
+        display: inline-block;
         width: auto;
-        margin-bottom: 3px;
+        margin: 0;
     }
 
     .brand-block {
@@ -1070,6 +1111,44 @@ li a.active::after {
         height: 50px;
         width: 85px;
         left: 10px;
+    }
+
+    .login_mb {
+        display: none;
+    }
+
+    .language_mobile {
+        position: relative;
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    .dropdown_mobile {
+        display: none;
+        position: absolute;
+        list-style-type: none;
+    }
+
+    .language_mobile:hover .dropdown_mobile {
+        display: block;
+        list-style-type: none;
+        background-color: #3E5526;
+        left: -120px;
+        width: 120px;
+        top: -0px;
+        height: auto;
+        font-size: 20px;
+        list-style: none;
+        color: #FFC46A;
+    }
+
+    .mobile-controls {
+        margin-left: 190px;
+        overflow: visible;
+    }
+
+    .language-selector {
+        display: none;
     }
 
     .topbar-inner {
@@ -1125,8 +1204,30 @@ li a.active::after {
         display: inline !important;
     }
 
+    .note_contact {
+        width: 70%;
+    }
+
+    .card-image img {
+        width: 47%;
+        margin-left: 0;
+        padding: 0 4px;
+    }
+
     .card-content {
         margin-left: 8px;
+    }
+
+    .hdesk {
+        display: block;
+    }
+
+    .hmb {
+        display: none;
+    }
+
+    .card-content a {
+        font-size: 20px;
     }
 
     .card-content h3 {
@@ -1146,6 +1247,17 @@ li a.active::after {
 }
 
 /*  test css trước */
+
+/* Mobile: hide login button at widths <= 450px */
+@media(max-width:450px) {
+
+    /* hide the desktop login button variant on small mobile */
+    .login_mb,
+    .btn-login.login_mb {
+        display: none !important;
+    }
+}
+
 
 /* From Uiverse.io by JaydipPrajapati1910 */
 .button {
