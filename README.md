@@ -9,11 +9,11 @@ Website giới thiệu các quán ăn phù hợp với bạn
  - Huỳnh Phúc Lợi    : Dev
  - Văn Sĩ Sang       : Dev
  - Nguyễn Ngọc Thái  : Dev
-# site map
+# Site map
 https://tinyurl.com/3596hcwc
 # Cài đặt project
 git clone https://github.com/gaulmt/IUHer-Foodie.git 
-# web
+# Web
 https://gaulmt.ct.ws/
 
 
