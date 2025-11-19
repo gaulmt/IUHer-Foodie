@@ -1170,7 +1170,14 @@ li a.active::after {
     }
 
     .hero_left {
-        margin-left: px;
+        display: grid;
+        place-items: center;
+        margin-left: 0%;
+
+    }
+
+    .txt_center {
+        text-align: center;
     }
 
     .hero_left h2 {
@@ -1202,6 +1209,7 @@ li a.active::after {
         grid-column: 1 !important;
         width: 95% !important;
         display: inline !important;
+        margin-top: 7%;
     }
 
     .note_contact {
@@ -1210,8 +1218,14 @@ li a.active::after {
 
     .card-image img {
         width: 47%;
-        margin-left: 0;
+        margin-left: ;
         padding: 0 4px;
+    }
+
+    .contact-card,
+    .card-content {
+        display: grid;
+        place-items: center;
     }
 
     .card-content {
@@ -1228,6 +1242,7 @@ li a.active::after {
 
     .card-content a {
         font-size: 20px;
+        text-decoration: none;
     }
 
     .card-content h3 {
@@ -1265,6 +1280,61 @@ li a.active::after {
         background-color: #13460D;
     }
 
+    .cum_mb {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .lnk_mb {
+        grid-column: 2/3;
+        width: 100px;
+        margin-left: 45px;
+    }
+
+    .social_mb {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column: 3/4;
+    }
+
+    .ytb {
+        grid-columns: 1/2;
+        grid-rows: 1/2;
+    }
+
+    .int {
+        grid-columns: 2/3;
+        grid-rows: 1/2;
+    }
+
+    .tw {
+        grid-columns: 1/2;
+        grid-rows: 2/3;
+    }
+
+    .fb {
+        grid-columns: 2/3;
+        grid-rows: 2/3;
+    }
+
+    .highlight {
+        display: inline-block;
+        background-color: #f1c995ab;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: bold;
+        color: #000000;
+        margin-bottom: 10px;
+        border-radius: 30px;
+    }
+
+    .button {
+        display: grid;
+        margin-bottom: 5%;
+        place-items: center;
+    }
 }
 
 /*  test css trước */
