@@ -3,7 +3,7 @@ Website giới thiệu các quán ăn phù hợp với bạn
 ![alt text](logo_IUHer_Foodie.png)
 
 # Thành viên
- - Nguyễn Đăng Dương : Leader (dev + tester)
+ - Nguyễn Đăng Dương : Leader (Dev + tester)
  - Huỳnh Minh Quân   : Design & Dev
  - Nguyễn Văn Bảo    : Design
  - Huỳnh Phúc Lợi    : Dev
