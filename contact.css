@@ -1263,6 +1263,12 @@ li a.active::after {
         padding: 0 4px;
     }
 
+    .card-image img:hover {
+        width: 47%;
+        margin-left: 100px;
+        padding: 0 4px;
+    }
+
     .contact-card,
     .card-content {
         display: grid;
@@ -1558,4 +1564,41 @@ li a.active::after {
 .btn-login:hover .icon {
     transform: translateX(4px);
     display: inline;
+}
+
+.langWrap {
+    position: relative;
+}
+
+.langBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #3E5526;
+    border: none;
+    text-align: left;
+}
+
+.langMenu {
+    display: none;
+    position: relative;
+    background-color: #63962c98;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.langMenu li a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #FFC46A;
+}
+
+.langMenu li a:hover {
+    background-color: #669335c6;
+}
+
+.langMenu.show {
+    display: block;
 }
