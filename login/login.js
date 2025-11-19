@@ -2,7 +2,7 @@
 const translations = {
     'vi': {
         'login_title': 'Đăng nhập',
-        'phone_input': 'Email',
+        'phone_input': 'Email/Số điện thoại',
         'password_input': 'Mật khẩu',
         'remember_me': 'Lưu thông tin',
         'forgot_password': 'Quên mật khẩu',
@@ -41,7 +41,7 @@ const translations = {
     },
     'en': {
         'login_title': 'Login',
-        'phone_input': 'Email',
+        'phone_input': 'Email/Phone number',
         'password_input': 'Password',
         'remember_me': 'Remember me',
         'forgot_password': 'Forgot password',
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             alert(dict['alert_register_success']);
 
                             // === LOGIC CHUYỂN HƯỚNG MỚI (ĐĂNG KÝ NGAY TỪ LOGIN) ===
-                            window.location.href = "../home.html"; 
+                            window.location.href = "../home.html";
                             // ======================================================
 
                         } catch (registerError) {
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ------------------------------------------------------------------
-    // C. Các hàm Firebase và logic Social Login (Giữ nguyên)
+    // C. Các hàm Firebase và logic Social Login 
     // ------------------------------------------------------------------
     async function saveNewUserData(uid, email, username = null) {
         return db.collection('users').doc(uid).set({
