@@ -14,23 +14,24 @@
             <a href="home.html"><img class="logo" src="logo.png" alt="IUHer Foodie logo" /></a>
             <nav>
                 <ul class="nav">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="explore.html">Explore</a></li>
-                    <li class="active"><a class="active" href="contact.html">Contact</a></li>
+                    <li><a class="size20" href="home.html">Home</a></li>
+                    <li><a class="size20" href="explore.html">Explore</a></li>
+                    <li class="active"><a class="size20" class="active" href="contact.html">Contact</a></li>
                     <li>
-                        <div class="language-selector">
+                        <div class="language-selector hmb">
                             <div class="language-toggle">
-                                <img class="icon_net" src="icon_internet.png" alt="internet icon" />
-                                <p style="color: #FFC46A;">English &#9662; </p>
+                                <img class="icon_net" src="icon_internet.png" alt="icon internet" />
+                                <p class="size20" style="color: #ffffff; font-size: 20px;">English &#9662; </p>
                             </div>
                             <ul class="language-dropdown">
-                                <li><a href="contact.html">Vietnamese</a></li>
-                                <li><a href="contact_C.html">Chinese</a></li>
+                                <li><a class="size20" href="contact.html">Tiếng việt</a></li>
+                                <li><a class="size20" href="contact_C.html">中文</a></li>
                             </ul>
                         </div>
                     </li>
                 </ul>
             </nav>
+            <a class="btn-login hmb login_mb" href="login.html">Đăng nhập</a>
             <!-- Mobile controls: hamburger + login grouped -->
             <div class="mobile-controls">
                 <div class="hamburger-menu">
@@ -43,36 +44,35 @@
                         <li><a href="home.html">Home</a></li>
                         <li><a href="explore.html">Explore</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <div class="language_mobile">
+                            <li><a>
+                                    Language</a>
+                            </li>
+                            <ul class="dropdown_mobile">
+                                <li><a href="contact.html">Vietnamese </a></li>
+                                <li><a href="contact_E.html">English</a></li>
+                                <li><a href="contact_C.html">中文</a></li>
+                            </ul>
+                            <li><a href="login.html">Log in</a></li>
+                        </div>
                     </ul>
                 </div>
-                <!-- Language selector for mobile (between hamburger and login) -->
-                <div class="language-selector mobile-lang-selector">
-                    <div class="language-toggle">
-                        <img class="icon_net" src="icon_internet.png" alt="internet icon" />
-                        <p style="color: #FFC46A; margin: 0; font-size: 13px;">English ▼</p>
-                    </div>
-                    <ul class="language-dropdown">
-                        <li><a href="contact.html">Vietnamese</a></li>
-                        <li><a href="contact_C.html">Chinese</a></li>
-                    </ul>
-                </div>
-                <a href="#" class="btn-login lg">
-                    <span>Login</span>
-                </a>
             </div>
-        </div>
     </header>
 
     <main>
         <section class="report">
             <div class="container_rp">
                 <div class="hero_left">
-                    <h2>Report Unsafe Restaurant</h2>
-                    <p>If you encounter a restaurant that isn't safe, don't hesitate to share it with others.</p>
-                    <!-- From Uiverse.io by JaydipPrajapati1910 -->
-                    <div data-tooltip="Report now!" class="button">
+                    <h2 class="size35">Report Unsafe Restaurants</h2>
+                    <p class="size24 txt_center">If you spot a restaurant that feels unsafe, please share it with the
+                        community
+                    </p>
+                    <div data-tooltip="report now!" class="button size24">
                         <div class="button-wrapper">
-                            <div class="text"><b>Report an issue</b></div>
+                            <div class="text size24"><a class="dlt_line"
+                                    href="https://m.me/gaulmtvn?hash=Abb-kJl-WrHnEpl4&source=qr_link_share"><b>report
+                                        any problems</b></div></a>
                             <span class="icon">
                                 <svg width="96" height="96" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
                                     aria-label="Warning" role="img">
@@ -92,8 +92,8 @@
 
 
                 </div>
-                <img class="anh_dai_doc hover-img" src="./dài dọc.jpg" alt="portrait image" />
-                <img class="anh_dai_ngang hover-img" src="./dài ngang.jpg" alt="landscape image" />
+                <img class="anh_dai_doc hover-img" src="./dài dọc.jpg" alt="portrait photo" />
+                <img class="anh_dai_ngang hover-img" src="./dài ngang.jpg" alt="landscape photo" />
                 <img class="anh_nho_1 hover-img" src="./vuông_nhỏ_1.jpg" alt="small image 1" />
                 <img class="anh_nho_2 hover-img" src="./vuông_nhỏ_2.jpg" alt="small image 2" />
             </div>
@@ -103,20 +103,28 @@
         <section class="contact-card">
             <div class="container card-grid">
                 <div class="card-image">
-                    <img src="./lẩu.jpg" alt="Bun dau mam tom (Vietnamese specialty)" />
+                    <img src="./lẩu.jpg" alt="Hot pot" />
                 </div>
                 <div class="card-content">
-                    <h3>For any inquiries, please contact:</h3>
-                    <p><strong>Phone:</strong> <a href="tel:0369743690"> 0369743690 </a> </p>
-                    <p><strong>Email:</strong> <a
-                            href="mailto:lmtgau@gmail.com?subject=Feedback%20about%20IUHer%20Foodie&body=Hello%2C%20I%27m%20gaulmt">Send
-                            email via Gmail</a></p>
-                    <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/177HH8GMtk/">Nguyen Dang
-                            Duong</a></p>
-                    <b>
-                        <p>All feedback and suggestions are noted and will be taken into account.</p>
-                        <p>Thank you for your support and interest in us!</p>
-                    </b>
+                    <h3 class="size48 ">For any questions, please contact us:</h3>
+                    <p class="size24 highlight"><strong style="color: black;">Phone:</strong> <a class="size24"
+                            href="tel:0369743690">
+                            0369743690 </a>
+                    </p>
+                    <p class="size24 highlight"><strong style="color: black;">Facebook:</strong> <a
+                            href="https://www.facebook.com/share/177HH8GMtk/">IUHer Foodie </a>
+                    </p>
+                    <p class="size24 highlight"><strong style="color: black;">Email:</strong> <a class="size24"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=lmtgau@gmail.com&su=feedback for IUHer Foodie &body=Hello, I am gaulmt ">
+                            IUHerFoodie@gmail.com
+                        </a>
+                    </p>
+                    <div class="nct">
+                        <b class="nct_mb size24">
+                            <p class="txt_center">Every piece of feedback helps us improve.
+                                Thank you so much for supporting and caring about us!</p>
+                        </b>
+                    </div>
                 </div>
             </div>
         </section>
@@ -126,69 +134,86 @@
         <div class="container footer-grid">
             <div class="footer-left">
                 <div class="brand-block">
-                    <img class="logo_ft" src="./logo.png" alt="IUHer Foodie logo">
-                    <p class="note_thanks">Thank you for visiting our website. We hope you find dishes you truly enjoy.
-                        Please leave a comment!</p>
+                    <img class="logo_ft" src="./logo.png">
+                    <p class="note_thanks size24" style="font-size: 20px;">Thanks for stopping by our website.
+                        We hope you find dishes that truly suit your taste. Leave us a comment!
+                    </p>
                 </div>
                 <div class="links">
                     <div class="column left">
                         <ul>
-                            <li class="dlt_nut" style="color:#FFC46A ;">Home</li>
-                            <li class="dlt_nut white"><a href="#">New Restaurants</a></li>
-                            <li class="dlt_nut white"><a href="#">Top Rated</a></li>
+                            <li class="dlt_nut size20" style="color:#FFC46A ;"><a href="home.html">Home</a></li>
+                            <li class="dlt_nut white hdesk"><a href="explore.html">Explore</a></li>
+                            <li class="dlt_nut white hdesk"><a href="contact.html">Contact</a></li>
+                            <li class="dlt_nut white size20 hmb"><a href="home.html">New restaurants</a></li>
+                            <li class="dlt_nut white size20 hmb"><a href="home.html">Top reviews</a></li>
                         </ul>
                     </div>
                     <div class="column right">
                         <ul>
-                            <li style="color: #FFC46A;" class="dlt_nut">Support</li>
-                            <li class="dlt_nut white"><a href="#">Report</a></li>
-                            <li class="dlt_nut white"><a href="#">About Us</a></li>
+                            <li style="color: #FFC46A;" class="dlt_nut size20">Support</li>
+                            <li class="dlt_nut white size20"><a
+                                    href="https://m.me/gaulmtvn?hash=Abb-kJl-WrHnEpl4&source=qr_link_share">Help
+                                    center</a></li>
+                            <li class="dlt_nut white size20"><a
+                                    href="https://m.me/gaulmtvn?hash=Abb-kJl-WrHnEpl4&source=qr_link_share">Report</a>
+                            </li>
+                            <li class="dlt_nut white size20"><a href="https://github.com/gaulmt/IUHer-Foodie">About
+                                    us</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-right">
             </div>
-            <div class="social">
-                <p>Contact us:</p>
-                <a href="https://zalo.me/g/dbhcog532"><img width="40" class="inconfooter" src="./zalo.png"
-                        alt="Zalo"></a>
-                <a href="https://www.instagram.com/gau_lmt?igsh=ZGkxeW14NWdlbWtm"><img width="40" class="inconfooter"
-                        src="./intagram.png" alt="Instagram"></a>
-                <a
-                    href="https://www.bing.com/videos/riverview/relatedvideo?pglt=299&q=rick+roll&cvid=3585f2d0d8354b298193d4789a75e1ea&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCDIzODZqMGoxqAIAsAIA&PC=U531&ru=%2fsearch%3fpglt%3d299%26q%3drick%2broll%26cvid%3d3585f2d0d8354b298193d4789a75e1ea%26gs_lcrp%3dEgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCDIzODZqMGoxqAIAsAIA%26FORM%3dANNTA1%26PC%3dU531&mmscn=vwrc&mid=CFAC16CA30B5EF2ADD68CFAC16CA30B5EF2ADD68&FORM=WRVORC&ntb=1&msockid=3f473ee9c23b11f0bd85ff30fd96031d"><img
-                        width="40" class="inconfooter" src="./youtube.logo.png" alt="YouTube"></a>
+            <div class="footer-info">
+                <div class=" cmt">
+                    <p class="size20">Contact</p>
+                </div>
+                <div class="social">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"><img
+                            src="./youtube.png" alt="YouTube icon" /></a>
+                    <a href="https://www.instagram.com/gau_lmt?igsh=ZGkxeW14NWdlbWtm"><img src="./instagram.png"
+                            alt="Instagram icon" /></a>
+                    <a href="https://x.com/gau_lmt68857"><img src="./twitter.png" alt="Twitter icon" /></a>
+                    <a href="https://www.facebook.com/share/177HH8GMtk/"><img src="./facebook.png"
+                            alt="Facebook icon" /></a>
+                </div>
+            </div>
+    </footer>
+
+    <!-- footer for responsive mobile-->
+    <footer>
+        <div class="ft_mb hdesk">
+            <div class="lg_notethanks">
+                <img class="lg_ft" src="./logo.png">
+                <p class="n_t" style="font-size: 14px;">Thanks for stopping by our website.
+                    We hope you find dishes that truly suit your taste. Leave a comment!
+                </p>
+            </div>
+            <div class="cum_mb">
+                <div class="links_mb">
+                    <div class="lnk_mb">+
+                        <ul>
+                            <li class="dlt_nut white size20"><a style="color:#FFC46A ;" href="#">Home</a></li>
+                            <li class="dlt_nut white size20"><a style="color:#FFC46A ;" href="#">Explore</a></li>
+                            <li class="dlt_nut white size20"><a style="color:#FFC46A ;" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social_mb">
+                    <a class="ytb"
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"><img
+                            src="./youtube.png" alt="YouTube icon" /></a>
+                    <a class="int" href="https://www.instagram.com/gau_lmt?igsh=ZGkxeW14NWdlbWtm"><img
+                            src="./instagram.png" alt="Instagram icon" /></a>
+                    <a class="tw" href="https://x.com/gau_lmt68857"><img src="./twitter.png" alt="Twitter icon" /></a>
+                    <a class="fb" href="https://www.facebook.com/share/177HH8GMtk/"><img src="./facebook.png"
+                            alt="Facebook icon" /></a>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script src="javasdaript.js"></script>
-    <script>
-        // Hamburger menu toggle
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const hamburgerDropdown = document.getElementById('hamburgerDropdown');
-
-        if (hamburgerBtn) {
-            hamburgerBtn.addEventListener('click', function () {
-                hamburgerDropdown.classList.toggle('active');
-            });
-
-            // Close dropdown when clicking on a link
-            const hamburgerLinks = hamburgerDropdown.querySelectorAll('a');
-            hamburgerLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    hamburgerDropdown.classList.remove('active');
-                });
-            });
-
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function (event) {
-                if (!event.target.closest('.hamburger-menu')) {
-                    hamburgerDropdown.classList.remove('active');
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>

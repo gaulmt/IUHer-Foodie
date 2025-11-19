@@ -7,6 +7,12 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+.dlt_line {
+    text-decoration: none;
+    color: inherit;
+
+}
+
 body {
     background-color: #FFFFF0;
 }
@@ -97,9 +103,10 @@ body {
     display: flex;
     gap: 22px;
     list-style: none;
-    margin: 0;
+    margin-left: 90%;
     padding: 0;
     position: relative;
+    width: 100%;
 }
 
 .nav a {
@@ -1119,14 +1126,18 @@ li a.active::after {
 
     .language_mobile {
         position: relative;
-        display: inline-block;
         list-style-type: none;
     }
 
+    .lg_mb:hover .dropdown_mobile {
+        display: block;
+    }
+
     .dropdown_mobile {
-        display: none;
+        display: inline-block;
         position: absolute;
         list-style-type: none;
+        display: none;
     }
 
     .language_mobile:hover .dropdown_mobile {
@@ -1143,8 +1154,38 @@ li a.active::after {
     }
 
     .mobile-controls {
-        margin-left: 190px;
+        margin-left: auto;
+        margin-right: 12px;
         overflow: visible;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: relative;
+    }
+
+    .hamburger-btn {
+        padding: 8px;
+        gap: 6px;
+        border: none;
+        background: none;
+        border-radius: 0;
+    }
+
+    .hamburger-btn span {
+        width: 24px;
+        height: 3px;
+    }
+
+    .hamburger-dropdown {
+        right: 0;
+        left: auto;
+        width: min(230px, 90vw);
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .language-selector {
@@ -1497,6 +1538,7 @@ li a.active::after {
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.529);
+    margin-left: 30%;
 }
 
 .btn-login .icon {

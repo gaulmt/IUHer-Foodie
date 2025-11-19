@@ -31,11 +31,11 @@
                     </li>
                 </ul>
             </nav>
-            <a class="btn-login hmb login_mb" href="contact.html">Đăng nhập</a>
+            <a class="btn-login hmb login_mb" href="login.html">Đăng nhập</a>
             <!-- Mobile controls: hamburger + login grouped -->
             <div class="mobile-controls">
                 <div class="hamburger-menu">
-                    <button class="hamburger-btn" id="hamburgerBtn">
+                    <button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Mở menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -45,16 +45,16 @@
                         <li><a href="explore.html">Khám phá</a></li>
                         <li><a href="contact.html">Liên hệ</a></li>
                         <div class="language_mobile">
-                            <li><a>
-                                    < Ngôn ngữ</a>
+                            <li class="lg_mb"><a>
+                                    Ngôn ngữ</a>
                             </li>
                             <ul class="dropdown_mobile">
-                                <li>Tiếng Việt</li>
-                                <li>English</li>
-                                <li>中文</li>
+                                <li><a href="contact.html">Tiếng Việt</a></li>
+                                <li><a href="contact_E.html">English</a></li>
+                                <li><a href="contact_C.html"> 中文 </a></li>
                             </ul>
-                            <li><a href="contact.html">Đăng nhập</a></li>
                         </div>
+                        <li><a href="login.html">Đăng nhập</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,7 +70,12 @@
                     </p>
                     <div data-tooltip="báo cáo ngay !" class="button size24">
                         <div class="button-wrapper">
-                            <div class="text size24"><b>báo cáo khi có vấn đề</b></div>
+                            <div class="text size24">
+                                <p><a class="dlt_line"
+                                        href="https://m.me/gaulmtvn?hash=Abb-kJl-WrHnEpl4&source=qr_link_share"><b>báo
+                                            cáo
+                                            khi có vấn đề</b></a></p>
+                            </div>
                             <span class="icon">
                                 <svg width="96" height="96" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
                                     aria-label="Cảnh báo" role="img">
@@ -143,19 +148,24 @@
                 <div class="links">
                     <div class="column left">
                         <ul>
-                            <li class="dlt_nut size20" style="color:#FFC46A ;">Trang chủ</li>
-                            <li class="dlt_nut white hdesk"><a href="#">Khám Phá</a></li>
-                            <li class="dlt_nut white hdesk"><a href="#">Liên hệ</a></li>
-                            <li class="dlt_nut white size20 hmb"><a href="#">Quán ăn mới</a></li>
-                            <li class="dlt_nut white size20 hmb"><a href="#">Top đánh giá</a></li>
+                            <li class="dlt_nut size20" style="color:#FFC46A ;"><a href="home.html"> Trang chủ </a></li>
+                            <li class="dlt_nut white hdesk"><a href="explore.html">Khám Phá</a></li>
+                            <li class="dlt_nut white hdesk"><a href="contact.html">Liên hệ</a></li>
+                            <li class="dlt_nut white size20 hmb"><a href="home.html">Quán ăn mới</a></li>
+                            <li class="dlt_nut white size20 hmb"><a href="home.html">Top đánh giá</a></li>
                         </ul>
                     </div>
                     <div class="column right">
                         <ul>
                             <li style="color: #FFC46A;" class="dlt_nut size20">Hỗ Trợ</li>
-                            <li class="dlt_nut white size20"><a href="#">Trung tâm trợ giúp</a></li>
-                            <li class="dlt_nut white size20"><a href="#">Báo cáo</a></li>
-                            <li class="dlt_nut white size20"><a href="#">Về chúng tôi</a></li>
+                            <li class="dlt_nut white size20"><a
+                                    href="https://m.me/gaulmtvn?hash=Abb-kJl-WrHnEpl4&source=qr_link_share">Trung tâm
+                                    trợ giúp</a></li>
+                            <li class="dlt_nut white size20"><a
+                                    href="https://m.me/gaulmtvn?hash=Abb-kJl-WrHnEpl4&source=qr_link_share">Báo cáo</a>
+                            </li>
+                            <li class="dlt_nut white size20"><a href="https://github.com/gaulmt/IUHer-Foodie">Về chúng
+                                    tôi</a></li>
                         </ul>
                     </div>
                 </div>
@@ -167,10 +177,13 @@
                     <p class="size20">Liên hệ</p>
                 </div>
                 <div class="social">
-                    <a href="#"><img src="./youtube.png" alt="YouTube icon" /></a>
-                    <a href="#"><img src="./instagram.png" alt="Instagram icon" /></a>
-                    <a href="#"><img src="./twitter.png" alt="Twitter icon" /></a>
-                    <a href="#"><img src="./facebook.png" alt="Facebook icon" /></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"><img
+                            src="./youtube.png" alt="YouTube icon" /></a>
+                    <a href="https://www.instagram.com/gau_lmt?igsh=ZGkxeW14NWdlbWtm"><img src="./instagram.png"
+                            alt="Instagram icon" /></a>
+                    <a href="https://x.com/gau_lmt68857"><img src="./twitter.png" alt="Twitter icon" /></a>
+                    <a href="https://www.facebook.com/share/177HH8GMtk/"><img src="./facebook.png"
+                            alt="Facebook icon" /></a>
                 </div>
             </div>
     </footer>
@@ -197,14 +210,47 @@
                     </div>
                 </div>
                 <div class="social_mb">
-                    <a class="ytb" href="#"><img src="./youtube.png" alt="YouTube icon" /></a>
-                    <a class="int" href="#"><img src="./instagram.png" alt="Instagram icon" /></a>
-                    <a class="tw" href="#"><img src="./twitter.png" alt="Twitter icon" /></a>
-                    <a class="fb" href="#"><img src="./facebook.png" alt="Facebook icon" /></a>
+                    <a class="ytb"
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"><img
+                            src="./youtube.png" alt="YouTube icon" /></a>
+                    <a class="int" href="https://www.instagram.com/gau_lmt?igsh=ZGkxeW14NWdlbWtm"><img
+                            src="./instagram.png" alt="Instagram icon" /></a>
+                    <a class="tw" href="https://x.com/gau_lmt68857"><img src="./twitter.png" alt="Twitter icon" /></a>
+                    <a class="fb" href="https://www.facebook.com/share/177HH8GMtk/"><img src="./facebook.png"
+                            alt="Facebook icon" /></a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('hamburgerBtn');
+            const dropdown = document.getElementById('hamburgerDropdown');
+            if (!btn || !dropdown) return;
+
+            const closeMenu = () => dropdown.classList.remove('active');
+
+            btn.addEventListener('click', function (event) {
+                if (window.innerWidth >= 480) return;
+                event.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            document.addEventListener('click', function (event) {
+                if (window.innerWidth >= 480) return;
+                if (!dropdown.contains(event.target) && !btn.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 480) {
+                    closeMenu();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
