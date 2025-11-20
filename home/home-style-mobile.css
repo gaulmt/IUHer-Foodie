@@ -37,6 +37,131 @@
         flex-wrap: wrap;
     }
 
+    /* home-page */
+    .page-container-top-content{
+        flex-wrap: wrap;
+    }
+    .page-container-select .active {
+        background-color: #FFC46A82;
+        box-shadow: 0px 4px 16.5px 1px #00000040;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        text-align: center;
+        transition: all 0.5s ease;
+}
+.page-container-select-button {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    color: #13460D;
+    cursor: pointer;
+     transition: all 0.5s ease;
+}
+.start {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+ }
+ .page-container-infor-button {
+    width: 100%;
+    max-width: 210px;
+    min-height: 76px;
+    border-radius: 10px;
+    background-color: #13460D;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-container-menu-list h1 {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 100%;
+    color: #000000;
+    display: inline-block;
+    margin: 0 0 10px;
+}
+.page-container-desc {
+    width: 100%;
+    padding: 40px 20px 30px;
+    background-color: #FFC46A57;
+    border-top: 0;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+.page-container-desc p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 2px;
+    color: #000000;
+}
+.page-container-menu-list li {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 30px;
+    color: #000000;
+}
+.page-container-infor {
+    width: 100%;
+    padding: 40px 20px 30px;
+    background-color: #FFC46A57;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-style: solid;
+    border-color: #13460d;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+    border-top: 0;
+}
+.page-container-infor-tittle {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 100%;
+    vertical-align: middle;
+    color: #000000;
+    line-height: 150%;
+}
+.page-container-infor-dddress {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 100%;
+    vertical-align: middle;
+    color: #000000;
+    line-height: 150%;
+    }   
+
+
+    /* Footer */
+    .footer-container{
+        max-width: 315px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+
+
     /* Phần hướng dẫn */
     .guide{
         padding: 40px 0;
@@ -82,8 +207,6 @@
         gap: 30px;
     }
 }
-
-
 /* FEEDBACK */
 @media only screen and (max-width: 930px) {
     :root {

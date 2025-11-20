@@ -1,4 +1,5 @@
 /* phần chung */
+/*  vừa code vừa hít bột mì nên rối tung */
 
 * {
     box-sizing: border-box;
@@ -9,7 +10,7 @@
 
 .dlt_line {
     text-decoration: none;
-    color: inherit;
+    color: white;
 
 }
 

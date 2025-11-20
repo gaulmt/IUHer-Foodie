@@ -334,6 +334,9 @@ body {
 .recommend-container {
     width: 90%;
     max-width: 1220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .recommend-container-selects {
@@ -424,6 +427,7 @@ body {
 }
 
 .recommend-container-tittle {
+    width: 100%;
     margin-top: 26px;
     font-weight: 700;
     font-style: Bold;
@@ -451,6 +455,11 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: all 0.7s ease;
+}
+.recommend-container-food-box:hover {
+   scale: calc(1.02);
+    transition: all 0.7s ease;
 }
 
 .recommend-container-food-box-img {
@@ -505,6 +514,37 @@ body {
     text-align: center;
     color: #FFFFFF;
     text-decoration: none;
+}
+.recommend-container-pages{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+.recommend-container-pages-box{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #13460D;
+    border-radius: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 85px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FFC46A;
+
+}
+.recommend-container-pages .active{
+    background-color: #13460D;
+}
+.recommend-container-pages-box:hover{
+    background-color: #13460D;
+    opacity: 50%;
 }
 
 /* Phần hướng dẫn */
@@ -1062,8 +1102,6 @@ body {
     font-weight: 100;
     font-size: 24px;
 }
-
-.page-container-infor-rates {}
 
 .page-container-infor-rates-text {
     font-weight: 100;
