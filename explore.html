@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="explore.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;800&family=Fredoka:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="logo_IUHer_Foodie.png" type="image/png">
+    <title>Explore</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <img class="img" src="./image/logo_IUHer_Foodie.png" alt="IUHer Foodie Logo">
+        </div>
+
+        <ul class="head">
+            <li class="nav-item nav-trangchu"><a href="home.html" id="nav-home">Trang chủ</a></li>
+            <li class="nav-item nav-khampha"><a href="explore.html" id="nav-explore">Giới thiệu</a></li>
+            <li class="nav-item nav-lienhe"><a href="contact.html" id="nav-contact">Liên hệ</a></li>
+        </ul>
+
+        <ul class="user-section">
+            <li class="nav-item nav-language">
+                <div class="lang-dropdown">
+                    <button class="lang-btn" id="lang-toggle">
+                        <img class="icon-globe" src="./image/streamline-plump_web.png" alt="Globe">
+                        <span>Tiếng Việt</span>
+                        <span class="arrow-down"></span> </button>
+
+                    <ul class="lang-menu" id="lang-menu">
+                        <li><a href="#" onclick="changeLang('en')">English</a></li>
+                        <li><a href="#" onclick="changeLang('vi')">Tiếng Việt</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item nav-user"><a href="index.html" id="nav-login">Đăng nhập</a></li>
+        </ul>
+        <button class="menu-icon">
+            <span class="icon"></span>
+            <span class="icon"></span>
+            <span class="icon"></span>
+        </button>
+    </div>
+    <div class="body-1">
+        <img class="avata" src="./image/avata.png" alt="avata">
+        <div class="content">
+            <h2 id="story-title">Câu chuyện của chúng tớ</h2>
+            <p class="pha" id="story-desc">Là một sinh viên, chúng tớ biết rằng mọi thứ trong hành trình bước đầu tự lập
+                của mỗi sinh
+                viên đều rất khó khăn. Trong số đó, việc chọn được những quán ăn sao cho vừa ngon, vừa sạch sẽ,
+                lại đảm bảo túi tiền là một điều không dễ với các bạn. Lẽ thế nên chúng tớ muốn góp chút sức thông qua
+                trang web này để giúp các bạn dễ dàng hơn đôi chút trong hành trình học tập sắp tới.</p>
+        </div>
+    </div>
+    <div class="body-2">
+        <h2 id="mission-title">Sứ mệnh của trang web</h2>
+    </div>
+
+    <div class="mission-section">
+        <div class="card-item">
+            <div class="card-number">1</div>
+            <h3 id="card1-title">Ngon - Bổ - Rẻ</h3>
+            <p id="card1-desc">Trang web sẽ cố gắng tìm, đề xuất cho bạn những quán ăn tốt, đảm bảo vệ sinh và phù hợp
+                nhất với bạn</p>
+        </div>
+
+        <div class="card-item">
+            <div class="card-number">2</div>
+            <h3 id="card2-title">Kết nối - Sẻ chia</h3>
+            <p id="card2-desc">Tạo cộng đồng sinh viên cùng nhau chia sẻ địa điểm và kinh nghiệm ăn uống. Hình thành bản
+                đồ ẩm thực</p>
+        </div>
+
+        <div class="card-item">
+            <div class="card-number">3</div>
+            <h3 id="card3-title">Tiết kiệm - Tiện lợi</h3>
+            <p id="card3-desc">Tiết kiệm được quỹ thời gian cho sinh viên khi đi tìm quán, đồng thời còn tạo sự tiện
+                lợi, dễ dàng cho
+                sinh viên trong những bữa ăn</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-col footer-info">
+            <img class="footer-logo" src="./image/logo_IUHer_Foodie.png" alt="IUHer Foodie Logo">
+            <p id="footer-desc">
+                Cảm ơn bạn vì đã dừng chân tại website của chúng tớ, chúc bạn kiếm được những món ăn thật sự phù hợp.
+                Nhớ để lại bình luận nha
+            </p>
+        </div>
+        <div class="footer-col footer-links">
+            <h4 id="footer-home">Trang chủ</h4>
+            <ul>
+                <li><a href="#" id="footer-new">Quán ăn mới</a></li>
+                <li><a href="#" id="footer-top">Top đánh giá</a></li>
+            </ul>
+        </div>
+        <div class="footer-col footer-links">
+            <h4 id="footer-support">Hỗ trợ</h4>
+            <ul>
+                <li><a href="#" id="footer-help">Trung tâm trợ giúp</a></li>
+                <li><a href="#" id="footer-report">Báo cáo</a></li>
+                <li><a href="#" id="footer-about">Về chúng tôi</a></li>
+            </ul>
+        </div>
+        <div class="footer-col footer-social">
+            <h4 id="footer-contact">Liên hệ</h4>
+            <div class="social-icons">
+                <a href="#"><img src="image/youtube.png" alt="Youtube"></a>
+                <a href="#"><img src="image/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="image/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="image/facebook.png" alt="Facebook"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="home-style-tablet.css">
+    <link rel="stylesheet" href="home-style-mobile.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-container">
+            <img src="home-assets/Logo.svg" alt="" class="header-logo">
+            <div class="header-menu">
+                <a href="../home.html" class="header-menu-box menu-select">
+                    <div class="header-menu-box-text">Trang chủ</div>
+                    <div class="header-menu-box-circle"></div>
+                </a>
+                <a href="../explore.html" class="header-menu-box menu-none">
+                    <div class="header-menu-box-text">Giới thiệu</div>
+                    <div class="header-menu-box-circle"></div>
+                </a>
+                <a href="../contact.html" class="header-menu-box menu-none">
+                    <div class="header-menu-box-text">Liên hệ</div>
+                    <div class="header-menu-box-circle"></div>
+                </a>
+            </div>
+            <div class="header-lan-button">
+                <div class="header-language">
+                    <img src="home-assets/head-language-icon.svg" alt="" class="header-language-icon">
+                    <select class="header-language-select">
+                        <option value="">Tiếng Việt</option>
+                        <option value="">English</option>
+                    </select>
+                </div>
+                <a href="../index.html" class="header-login">Đăng nhập</a>
+            </div>
+
+            <!-- Làm list menu cho tablet và mobile -->
+            <img src="home-assets/head-list.svg" alt="" class="header-list">
+            <div id="backdrop" class="backdrop hidden"></div>
+            <div id="nav" class="nav hidden">
+                <div class="close-btn" style="text-align:right; font-size:28px; cursor:pointer; color: #FFC46A;">✕</div>
+                <a href="../home.html" class="item">Trang chủ</a>
+                <a href="" class="item">Giới thiệu</a>
+                <a href="../contact.html" class="item">Liên hệ</a>
+            </div>
+            <script src="head-list.js"></script>
+
+        </div>
+    </div>
+
+    <!-- Page -->
+    <div class="page">
+        <div class="page-container">
+            <div class="page-container-top">
+                <img src="home-assets/page1-background.jpg" alt="" class="page-container-top-background">
+                <div class="page-container-top-content">
+                    <div class="page-container-top-content-img"><img src="home-assets/page1-img-1.jpg" alt=""></div>
+                    <div class="page-container-top-content-img"><img src="home-assets/page1-img-2.jpg" alt=""></div>
+                    <div class="page-container-top-content-img"><img src="home-assets/page1-img-3.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="page-container-select">
+                <button class="page-container-select-button active" onclick="showTab('info')">Thông tin chung</button>
+                <button class="page-container-select-button" onclick="showTab('menu')">Menu</button>
+                <button class="page-container-select-button" onclick="showTab('desc')">Mô tả</button>
+            </div>
+            <div class="page-container-infor" id="infor">
+                <p class="page-container-infor-tittle"><span>Tên quán: <br> </span> Quán cơm Mậu</p>
+                <div class="page-container-infor-dddress"><span>Địa chỉ: <br> </span> 123 Nguyễn Thái Sơn, Gò Vấp</div>
+                <div class="page-container-infor-rates">
+                    <p class="page-container-infor-rates-text">Xếp hạng:</p>
+                    <div class="page-container-infor-rates-star">
+                        <img src="home-assets/star-page.svg" alt="">
+                        <img src="home-assets/star-page.svg" alt="">
+                        <img src="home-assets/star-page.svg" alt="">
+                        <img src="home-assets/star-page.svg" alt="">
+                        <img src="home-assets/star-page.svg" alt="">
+                    </div>
+                </div>
+                <a href="" class="page-container-infor-button">Chỉ đường</a>
+            </div>
+            <div class="page-container-menu" id="menu">
+                <div class="page-container-menu-container">
+                    <div class="page-container-menu-list">
+                        <h1>Canh:</h1>
+                        <ol>
+                            <li>Canh chua cá basa.........................69.000</li>
+                            <li>Canh cá lóc nấu măng...................79.000</li>
+                            <li>Canh rau ngót thịt bằm..................49.000</li>
+                            <li>Canh khổ qua dồn thịt....................59.000</li>
+                            <li>Canh bí đỏ tôm tươi........................59.000</li>
+                            <li>Canh cải thịt bằm...........................49.000</li>
+                            <li>Canh mướp nấu hến......................55.000</li>
+                            <li>Canh cà chua trứng.......................39.000</li>
+                            <li>Lẩu canh chua nhỏ..........................129.000</li>
+                        </ol>
+                    </div>
+                    <div class="page-container-menu-list">
+                        <h1>Đậu hủ:</h1>
+                        <ol>
+                            <li>Đậu hũ chiên giòn............................29.000</li>
+                            <li>Đậu hũ sốt cà................................29.000</li>
+                            <li>Đậu hũ xào sả ớt.............................29.000</li>
+                            <li>Đậu hũ nhồi thịt..............................39.000</li>
+                        </ol>
+                    </div>
+                    <div class="page-container-menu-list">
+                        <h1>Cơm: </h1>
+                        <ol>
+                            <li>Cơm trắng...........................................15.000</li>
+                            <li>Cơm thêm..........................................10.000</li>
+                            <li>Cơm gạo lứt......................................19.000</li>
+                            <li>Cơm chiên trứng..............................39.000</li>
+                            <li>Cơm chiên dương châu..................59.000</li>
+                        </ol>
+                    </div>
+                    <div class="page-container-menu-list">
+                        <h1>Món xào:</h1>
+                        <ol>
+                            <li>Đậu hũ chiên giòn............................29.000</li>
+                            <li>Đậu hũ sốt cà................................29.000</li>
+                            <li>Đậu hũ xào sả ớt.............................29.000</li>
+                            <li>Đậu hũ nhồi thịt..............................39.000</li>
+                        </ol>
+                    </div>
+                    <div class="page-container-menu-list">
+                        <h1>Món mặn:</h1>
+                        <ol>
+                            <li>Thịt kho trứng................................49.000</li>
+                            <li>Cá kho tộ.....................................69.000</li>
+                            <li>Sườn rim mặn..................................59.000</li>
+                            <li>Gà xào sả ớt...................................59.000</li>
+                            <li>Ba rọi cháy cạnh..............................59.000</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+            <div class="page-container-desc" id="desc">
+                <p>Quán ăn mậu dịch mang phong cách hoài niệm, gợi nhớ về những năm tháng xưa cũ khi mọi thứ đều mộc
+                    mạc, giản dị và chan đầy tình người. Không gian quán được bày trí theo kiểu bao cấp: bàn ghế gỗ cũ
+                    kỹ, tường vàng phai màu thời gian, bảng hiệu viết tay và những vật dụng quen thuộc như phích nước
+                    đỏ, radio cổ, chiếc quạt sắt, tem phiếu và lon sữa bò đựng đũa.</p>
+            </div>
+        </div>
+    </div>
+    <script src="page.js"></script>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-container-content">
+                <img src="home-assets/Logo.svg" alt="" class="footer-container-content-logo">
+                <p class="footer-container-content">Cảm ơn bạn vì đã dừng chân tại website của chúng tớ, chúc bạn kiếm
+                    được những món ăn thật sự phù hợp. Nhớ để lại bình luận nha</p>
+            </div>
+            <div class="footer-container-menu-mobile">
+                <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-select">Trang
+                    chủ</a>
+                <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-none">Khám phá</a>
+                <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-none">Liên hệ</a>
+            </div>
+            <div class="footer-container-menu">
+                <p class="footer-container-menu-home">Trang chủ</p>
+                <a href="" class="footer-container-menu-newfood">Quán ăn mới</a>
+                <a href="" class="footer-container-menu-toprate">Top đánh giá</a>
+            </div>
+            <div class="footer-container-support">
+                <p class="footer-container-support-sp">Hỗ trợ</p>
+                <a href="" class="footer-container-support-sparea">Trung tâm trợ giúp</a>
+                <a href="" class="footer-container-support-report">Báo cáo</a>
+                <a href="" class="footer-container-support-they">Về chúng tôi</a>
+            </div>
+            <div class="footer-container-contact">
+                <p class="footer-container-contact-text">Liên hệ</p>
+                <div class="footer-container-contact-container">
+                    <img src="home-assets/foot-icon-1.svg" alt="" class="footer-container-contact-container-icon">
+                    <img src="home-assets/foot-icon-2.svg" alt="" class="footer-container-contact-container-icon">
+                    <img src="home-assets/foot-icon-3.svg" alt="" class="footer-container-contact-container-icon">
+                    <img src="home-assets/foot-icon-4.svg" alt="" class="footer-container-contact-container-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
