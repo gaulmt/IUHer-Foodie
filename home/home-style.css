@@ -1,0 +1,1250 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: 'Be Vietnam Pro';
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffeb;
+}
+
+/* Header */
+.header {
+    padding-top: 15px;
+    width: 100%;
+    background-color: #3E5526;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1253px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-menu {
+    width: 100%;
+    max-width: 469px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.header-menu-box {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header-menu-box-text {
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FFC46A;
+}
+
+.header-menu-box-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}
+
+.menu-select .header-menu-box-text {
+    font-weight: 800;
+}
+
+.menu-select .header-menu-box-circle {
+    background-color: #FFC46A;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.menu-none .header-menu-box-text {
+    font-weight: 400;
+}
+
+.header-menu-box:hover {
+    transform: translateY(-3px);
+}
+
+.menu-none:hover .header-menu-box-text {
+    font-weight: 700;
+}
+
+.header-lan-button {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    gap: 30px;
+}
+
+.header-language {
+    display: flex;
+    gap: 6px;
+}
+
+.header-language-select {
+    background-color: transparent;
+    border: 0;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: #3E5526;
+}
+
+.header-login {
+    display: inline-block;
+    width: 100%;
+    max-width: 108px;
+    min-height: 46px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #3E5526;
+    background-color: #FFC46A;
+    border-radius: 11px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.header-login:hover {
+    filter: brightness(1.15);
+    transform: translateY(-3px);
+}
+
+.header-list {
+    display: none;
+}
+
+/* Làm list menu cho tablet và mobile */
+.header-list {
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: #435825;
+    padding: 40px 20px;
+    list-style: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 20;
+}
+
+.nav.hidden {
+    transform: translateX(100%);
+}
+
+.item {
+    height: 100px;
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 20px;
+    border-bottom: 2px solid black;
+    font-weight: 700;
+    text-decoration: none;
+    color: #FFC46A;
+    font-size: 25px;
+}
+
+.item:hover {
+    background-color: #FFC46A;
+    color: #3E5526;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+    z-index: 19;
+}
+
+.backdrop.hidden {
+    display: none;
+}
+
+/* Hero section */
+.hero-section {
+    width: 100%;
+    padding: 68px 0 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section-container {
+    width: 90%;
+    max-width: 1220px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 45px;
+}
+
+.hero-section-container-top {
+    width: 100%;
+    display: flex;
+    gap: 61px;
+    padding: 65px 54px 0 54px;
+    border-radius: 45px 45px 0 24px;
+    background-color: #FFC46A30;
+}
+
+.hero-section-container-top-content {
+    width: 100%;
+    max-width: 524px;
+    padding-bottom: 64px;
+    flex-shrink: 1;
+}
+
+.hero-section-container-top-content-tittle {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 50px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+.hero-section-container-top-content-tittle span {
+    color: #AB2A02;
+}
+
+.hero-section-container-top-content-text {
+    margin-top: 34px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    font-family: Inter;
+    color: #000000;
+}
+
+.hero-section-container-top-img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 1;
+    transition: all 0.5s ease;
+}
+
+.hero-section-container-top-img:hover {
+    transform: scale(1.2);
+}
+
+.hero-section-container-top-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-section-container-top-content-bottom {
+    width: 100%;
+    display: flex;
+}
+
+.hero-section-container-top-content-bottom-button {
+    width: fit-content;
+    height: fit-content;
+    padding: 19px 17px 0 0;
+    position: relative;
+    background-color: #ffffeb;
+}
+
+.hero-section-container-top-content-bottom-button-boder {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hero-section-container-top-content-bottom-button-explore {
+    display: inline-block;
+    width: 409px;
+    min-height: 99px;
+    box-shadow: 0px 0px 18.3px 6px #00000040;
+    background-color: #3E5526;
+    border-radius: 24px 29px 24px 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 38px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FFC46A;
+    transition: all 0.3s ease;
+}
+
+.hero-section-container-top-content-bottom-button-explore:hover {
+    transform: translateY(-5px);
+}
+
+.hero-section-container-top-content-bottom-background-right {
+    width: 100%;
+    height: 100%;
+    background-color: #FFC46A30;
+    border-radius: 0 0 45px 24px;
+}
+
+/* Đề xuất */
+.recommend {
+    width: 100%;
+    padding: 8px 0 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.recommend-container {
+    width: 90%;
+    max-width: 1220px;
+}
+
+.recommend-container-selects {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.recommend-container-selects-list {
+    width: 100%;
+    max-width: 228px;
+    min-height: 63px;
+    border: 2px solid #13460D;
+    background-color: #F9E8C3;
+    border-radius: 10px;
+    padding-left: 14px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 85px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.recommend-container-selects-price {
+    width: 100%;
+    max-width: 228px;
+    min-height: 63px;
+    border: 2px solid #13460D;
+    background-color: #F9E8C3;
+    border-radius: 10px;
+    padding-left: 14px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 85px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.recommend-container-selects-rates {
+    width: 100%;
+    max-width: 228px;
+    min-height: 63px;
+    border: 2px solid #13460D;
+    background-color: #F9E8C3;
+    border-radius: 10px;
+    padding-left: 14px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 85px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.recommend-container-selects-search {
+    width: 100%;
+    max-width: 228px;
+    min-height: 63px;
+    position: relative;
+}
+
+.recommend-container-selects-search img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+}
+
+.recommend-container-selects-search input {
+    width: 100%;
+    height: 100%;
+    padding-left: 60px;
+    border: 2px solid #13460D;
+    background-color: #F9E8C3;
+    border-radius: 10px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 85px;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.recommend-container-tittle {
+    margin-top: 26px;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+    line-height: 85px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+.recommend-container-food {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.recommend-container-food-box {
+    width: 100%;
+    max-width: 362.3222351074219px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 1px #00000040;
+    padding: 19px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recommend-container-food-box-img {
+    width: 100%;
+    height: 324.5222473144531px;
+    box-shadow: 0px 1px 7.1px 4px #00000040;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.recommend-container-food-box-tittle {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+}
+
+.recommend-container-food-box-rates {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.recommend-container-food-box-text {
+    margin-top: 10px;
+    font-weight: 500;
+    font-style: Italic;
+    font-size: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+}
+
+.recommend-container-food-box-button {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    max-width: 231.79620361328125px;
+    min-height: 42.87937927246094px;
+    background-color: #13460DC9;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Phần hướng dẫn */
+.guide {
+    width: 100%;
+    padding: 29px 0 62px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #FFC46A26;
+}
+
+.guide-content {
+    width: 90%;
+    max-width: 1156px;
+}
+
+.guide-content-tittle {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 85px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+}
+
+.guide-content-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.guide-content-container {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.guide-content-container-box {
+    width: 100%;
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guide-content-container-box-img {
+    width: 100%;
+    height: 332px;
+    object-fit: cover;
+    border-radius: 23px;
+    box-shadow: 0px 0px 22.2px 0px #13460D40;
+}
+
+.guide-content-container-box-tittle {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+}
+
+.guide-content-container-box-text {
+    font-weight: 300;
+    font-style: Light;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #000000;
+}
+
+.guide-box2 {
+    margin-top: 16px;
+}
+
+.guide-box2 .guide-content-container-box-tittle {
+    order: 1;
+}
+
+.guide-box2 .guide-content-container-box-text {
+    order: 2;
+}
+
+.guide-box2 .guide-content-container-box-img {
+    order: 3;
+}
+
+/* Phần phản hồi của người dùng */
+:root {
+    --card-width: 600px;
+    --card-height: 300px;
+    --gap-x: 100px;
+    --gap-z: 150px;
+    --bg-color: #FEF7E6;
+}
+
+.feedback {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(255, 255, 235, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-feedback {
+    width: 100%;
+    max-width: 1220px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 45px;
+}
+
+.main-title {
+    font-family: 'Be Vietnam Pro';
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+    width: 100%;
+    height: auto;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1220px;
+    justify-content: center;
+}
+
+.carousel-display {
+    width: var(--card-width);
+    height: var(--card-height);
+    perspective: 1220px;
+    position: relative;
+    margin: 0 80px;
+}
+
+.carousel-items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    left: 0;
+    top: 0;
+}
+
+.carousel-item {
+    position: absolute;
+    width: var(--card-width);
+    height: var(--card-height);
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.5s ease-in-out,
+        opacity 0.5s ease-in-out,
+        box-shadow 0.5s ease-in-out;
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.box-top-feedback {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avt-feedback {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.right-box-feedback {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mini-title-feedback {
+    width: 100%;
+    height: auto;
+    font-weight: 700;
+    font-size: 32px;
+    font-family: 'Be Vietnam Pro';
+}
+
+.mini-text-feedback {
+    font-family: 'Be Vietnam Pro';
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.box-bottom-feedback {
+    width: 90%;
+    height: auto;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* --- ĐỊNH DẠNG VỊ TRÍ 3D --- */
+
+.carousel-item.center {
+    transform: translateX(0) translateZ(0) scale(1.05);
+    /* Giữ kích thước gần như ban đầu */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-item.left {
+    transform: translateX(calc(-1 * var(--gap-x))) rotateY(10deg) translateZ(calc(-1 * var(--gap-z)));
+    z-index: 2;
+    opacity: 0.6;
+    /* Mờ hơn */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+.carousel-item.right {
+    transform: translateX(var(--gap-x)) rotateY(-10deg) translateZ(calc(-1 * var(--gap-z)));
+    z-index: 2;
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+/* --- NÚT ĐIỀU HƯỚNG --- */
+.nav-btn {
+    z-index: 10;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #333;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+    background-color: #3E5526;
+    color: #FEF7E6;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    padding: 30px 0;
+    background-color: #13460D;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1173px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-container-menu-mobile {
+    display: none;
+}
+
+.footer-container-content {
+    width: 100%;
+    max-width: 303px;
+}
+
+.footer-container-content {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0%;
+    color: #FFC46A;
+    text-align: justify;
+}
+
+.footer-container-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-container-menu-home {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #FFC46A;
+    text-decoration: none;
+}
+
+.footer-container-menu-newfood {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-container-menu-toprate {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-container-support {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-container-support-sp {
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFC46A;
+    text-decoration: none;
+}
+
+.footer-container-support-sparea {
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-container-support-report {
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-container-support-they {
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-container-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-container-contact-text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFC46A;
+}
+
+.footer-container-contact-container {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/* Page */
+.page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 49px 0 61px 0;
+}
+
+.page-container {
+    width: 90%;
+    max-width: 1230px;
+}
+
+.page-container-top {
+    width: 100%;
+    box-shadow: 0px 0px 31.1px 6px #00000040;
+    border-radius: 36px;
+    min-height: 591px;
+    position: relative;
+    padding: 358px 0 16px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.page-container-top-background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 36px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.page-container-top-content {
+    width: 95%;
+    max-width: 1195px;
+    background: #FFFFFF73;
+    box-shadow: 0px 0px 41.8px -47px #FFFFFF;
+    border-radius: 27px;
+    padding: 24px 15px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.page-container-top-content-img {
+    width: 100%;
+    max-width: 369.3966369628906px;
+    height: 170.49075317382812px;
+    border-radius: 25px;
+
+}
+
+.page-container-top-content-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.page-container-select {
+    width: 100%;
+    margin-top: 42px;
+    min-height: 77px;
+    border-radius: 10px 10px 0 0;
+    background-color: #FFFFAA33;
+    display: flex;
+    overflow: hidden;
+    border-top: 1px;
+    border-right: 1px;
+    border-bottom: 0;
+    border-left: 1px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+.page-container-select-button {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 300;
+    font-style: Light;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #13460D;
+    cursor: pointer;
+}
+
+.page-container-select .active {
+    background-color: #FFC46A82;
+    box-shadow: 0px 4px 16.5px 1px #00000040;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+#menu,
+#desc {
+    display: none;
+}
+
+.page-container-infor {
+    width: 100%;
+    padding: 40px 71px 28px 71px;
+    background-color: #FFC46A57;
+    border-top: 0;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.page-container-infor-tittle {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.page-container-infor-tittle span {
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.page-container-infor-dddress {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000000;
+}
+
+.page-container-infor-dddress span {
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.page-container-infor-rates {}
+
+.page-container-infor-rates-text {
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+
+}
+
+.page-container-infor-rates-star {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.page-container-infor-button {
+    display: block;
+    width: 100%;
+    max-width: 307px;
+    min-height: 76px;
+    border-radius: 10px;
+    background-color: #13460D;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container-menu {
+    width: 100%;
+    padding: 40px 24px 28px 24px;
+    background-color: #FFC46A57;
+    border-top: 0;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+.page-container-menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.page-container-menu-list {
+    width: fit-content;
+}
+
+.page-container-menu-list h1 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+    display: inline-block;
+}
+
+.page-container-menu-list li {
+    font-weight: 300;
+    font-style: Light;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+
+.page-container-desc {
+    width: 100%;
+    padding: 40px 71px 28px 71px;
+    background-color: #FFC46A57;
+    border-top: 0;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.page-container-desc p {
+    font-weight: 300;
+    font-style: Light;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+
+
+
+
+
+/* test */
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffd88a;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.language-selector:hover .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #333333;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.language-dropdown li a:hover {
+    background: #43750f;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+    /* hoặc chiều cao menu của bạn */
+}
+
+.language-toggle img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+}
+
+.language-toggle p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}

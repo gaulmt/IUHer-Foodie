@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IUHer Foodie - Trang chủ</title>
+    <link rel="stylesheet" href="home/home-style.css">
+    <link rel="stylesheet" href="home/home-style-tablet.css">
+    <link rel="stylesheet" href="home/home-style-mobile.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-container">
+            <img src="home/home-assets/Logo.svg" alt="" class="header-logo">
+            <div class="header-menu">
+                <a href="home.html" class="header-menu-box menu-select">
+                    <div class="header-menu-box-text">Trang chủ</div>
+                    <div class="header-menu-box-circle"></div>
+                </a>
+                <a href="explore.html" class="header-menu-box menu-none">
+                    <div class="header-menu-box-text">Giới thiệu</div>
+                    <div class="header-menu-box-circle"></div>
+                </a>
+                <a href="contact.html" class="header-menu-box menu-none">
+                    <div class="header-menu-box-text">Liên hệ</div>
+                    <div class="header-menu-box-circle"></div>
+                </a>
+            </div>
+            <div class="header-lan-button">
+                <div class="language-selector hmb">
+                    <div class="language-toggle">
+                        <img class="icon_net" src="icon_internet.png" alt="icon internet" />
+                        <p class="size20" style="color: #ffffff; font-size: 20px;">Tiếng Việt &#9662; </p>
+                    </div>
+                    <ul class="language-dropdown">
+                        <li><a class="size20" href="home_E.html">English</a></li>
+                    </ul>
+                </div>
+                <a href="index.html" class="header-login">Đăng nhập</a>
+            </div>
+
+            <!-- Làm list menu cho tablet và mobile -->
+            <img src="home/home-assets/head-list.svg" alt="" class="header-list">
+            <div id="backdrop" class="backdrop hidden"></div>
+            <div id="nav" class="nav hidden">
+                <div class="close-btn" style="text-align:right; font-size:28px; cursor:pointer; color: #FFC46A;">✕</div>
+                <a href="home.html" class="item">Trang chủ</a>
+                <a href="explore" class="item">Giới thiệu</a>
+                <a href="contact.html" class="item">Liên hệ</a>
+            </div>
+            <script src="home/head-list.js"></script>
+
+        </div>
+    </div>
+
+    <div class="body">
+
+        <!-- Hero section -->
+        <div class="hero-section">
+            <div class="hero-section-container">
+                <div class="hero-section-container-top">
+                    <section class="hero-section-container-top-content">
+                        <h1 class="hero-section-container-top-content-tittle">Bạn muốn tìm <br> <span>quán ngon quanh
+                                bạn</span></h1>
+                        <p class="hero-section-container-top-content-text">Nếu bạn là sinh viên - người đang gặp khó
+                            khăn trong việc chọn lựa quán ăn, uống sao cho “ngon, bổ, rẻ” thì đây chính là trang web
+                            thực sự hữu ích cho bạn.</p>
+                        <p class="hero-section-container-top-content-text">Vài cú click chuột đã có thể giúp bạn tìm ra
+                            được quán ăn yêu thích, tại sao bạn không thử ngay.</p>
+                    </section>
+                    <div class="hero-section-container-top-img"><img src="home/home-assets/hero-img.svg" alt=""></div>
+                </div>
+                <div class="hero-section-container-top-content-bottom">
+                    <div class="hero-section-container-top-content-bottom-button">
+                        <img class="hero-section-container-top-content-bottom-button-boder"
+                            src="home/home-assets/hero-border-radius.svg">
+                        <a href="explore.html" class="hero-section-container-top-content-bottom-button-explore">Khám phá
+                            ngay</a>
+                    </div>
+                    <div class="hero-section-container-top-content-bottom-background-right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Đề xuất -->
+        <div class="recommend">
+            <div class="recommend-container">
+                <div class="recommend-container-selects">
+                    <select name="Danh mục" id="" class="recommend-container-selects-list">
+                        <option value="" disabled selected>Danh mục</option>
+                        <option value="">Thức ăn</option>
+                        <option value="">Thức uống</option>
+                    </select>
+                    <select name="" id="" class="recommend-container-selects-price">
+                        <option value="" disabled selected>Giá cả</option>
+                    </select>
+                    <select name="" id="" class="recommend-container-selects-rates">
+                        <option value="" disabled selected>Đánh giá</option>
+                        <option value="">1 sao</option>
+                        <option value="">2 sao</option>
+                        <option value="">3 sao</option>
+                        <option value="">4 sao</option>
+                        <option value="">5 sao</option>
+                    </select>
+                    <div class="recommend-container-selects-search">
+                        <img src="home/home-assets/icon-search.svg" alt="">
+                        <input type="text" placeholder="Tìm kiếm">
+                    </div>
+
+                </div>
+                <p class="recommend-container-tittle">Đề xuất</p>
+                <div class="recommend-container-food">
+                    <div class="recommend-container-food-box">
+                        <img src="home/home-assets/recommend-img-1.jpg" alt="" class="recommend-container-food-box-img">
+                        <p class="recommend-container-food-box-tittle">Quán cơm Mậu</p>
+                        <div class="recommend-container-food-box-rates">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                        </div>
+                        <p class="Xem chi tiết">Giá bán: Từ 30.000 VNĐ</p>
+                        <a href="home/home-page.html" class="recommend-container-food-box-button">Xem chi tiết</a>
+                    </div>
+                    <div class="recommend-container-food-box">
+                        <img src="home/home-assets/recommend-img-2.png" alt="" class="recommend-container-food-box-img">
+                        <p class="recommend-container-food-box-tittle">Cơm bao cấp</p>
+                        <div class="recommend-container-food-box-rates">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                        </div>
+                        <p class="Xem chi tiết">Giá bán: Từ 30.000 VNĐ</p>
+                        <a href="home/home-page.html" class="recommend-container-food-box-button">Xem chi tiết</a>
+                    </div>
+                    <div class="recommend-container-food-box">
+                        <img src="home/home-assets/recommend-img-3.jpg" alt="" class="recommend-container-food-box-img">
+                        <p class="recommend-container-food-box-tittle">Cơm gà đồi</p>
+                        <div class="recommend-container-food-box-rates">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                        </div>
+                        <p class="Xem chi tiết">Giá bán: Từ 35.000 VNĐ</p>
+                        <a href="home/home-page.html" class="recommend-container-food-box-button">Xem chi tiết</a>
+                    </div>
+                    <div class="recommend-container-food-box">
+                        <img src="home/home-assets/recommend-img-4.jpg" alt="" class="recommend-container-food-box-img">
+                        <p class="recommend-container-food-box-tittle">Quán Pờ</p>
+                        <div class="recommend-container-food-box-rates">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                        </div>
+                        <p class="Xem chi tiết">Giá bán: Từ 30.000 VNĐ</p>
+                        <a href="home/home-page.html" class="recommend-container-food-box-button">Xem chi tiết</a>
+                    </div>
+                    <div class="recommend-container-food-box">
+                        <img src="home/home-assets/recommend-img-5.jpg" alt="" class="recommend-container-food-box-img">
+                        <p class="recommend-container-food-box-tittle">Cơm quê nhà</p>
+                        <div class="recommend-container-food-box-rates">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                        </div>
+                        <p class="Xem chi tiết">Giá bán: Từ 30.000 VNĐ</p>
+                        <a href="home/home-page.html" class="recommend-container-food-box-button">Xem chi tiết</a>
+                    </div>
+                    <div class="recommend-container-food-box">
+                        <img src="home/home-assets/recommend-img-6.jpg" alt="" class="recommend-container-food-box-img">
+                        <p class="recommend-container-food-box-tittle">Căn tin IUH</p>
+                        <div class="recommend-container-food-box-rates">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                            <img src="home/home-assets/recommend-star.svg" alt="">
+                        </div>
+                        <p class="Xem chi tiết">Giá bán: Từ 35.000 VNĐ</p>
+                        <a href="home/home-page.html" class="recommend-container-food-box-button">Xem chi tiết</a>
+                    </div>
+
+
+
+
+                </div>
+                <div class="recommend-container-pages"></div>
+            </div>
+        </div>
+
+        <!-- Phần hướng dẫn -->
+        <div class="guide">
+            <section class="guide-content">
+                <h1 class="guide-content-tittle">Bạn chưa tìm được quán ăn mong muốn</h1>
+                <p class="guide-content-text">Nếu bạn chưa tìm được món ăn phù hợp, hoặc website chưa có bài đánh giá về
+                    quán mà bạn mong muốn tìm kiếm. Đừng lo! Dưới đây là 3 bước đơn giản giúp bạn tự “săn” ra một quán
+                    ăn đáng thử quanh trường.</p>
+                <div class="guide-content-container">
+                    <div class="guide-content-container-box guide-box1">
+                        <img src="home/home-assets/guide-img-1.jpg" alt="" class="guide-content-container-box-img">
+                        <h1 class="guide-content-container-box-tittle">Quan sát thực tế</h1>
+                        <p class="guide-content-container-box-text">Chọn quán sáng sủa, bàn ghế sạch sẽ, đồ ăn được nấu
+                            tại chỗ, khu vực bếp gọn gàng.</p>
+                    </div>
+                    <div class="guide-content-container-box guide-box2">
+                        <img src="home/home-assets/guide-img-2.jpg" alt="" class="guide-content-container-box-img">
+                        <h1 class="guide-content-container-box-tittle">Xem lượng khách</h1>
+                        <p class="guide-content-container-box-text">Nên chọn quán có nhiều sinh viên, khách ra vào đều
+                            đặn, không quá vắng.</p>
+                    </div>
+                    <div class="guide-content-container-box guide-box3">
+                        <img src="home/home-assets/guide-img-3.jpg" alt="" class="guide-content-container-box-img">
+                        <h1 class="guide-content-container-box-tittle">Hỏi trước giá cả</h1>
+                        <p class="guide-content-container-box-text">Nên hỏi trước giá cả của phần ăn rõ ràng để tránh bị
+                            chặt chém .</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- Phần phản hồi của người dùng -->
+    <section class="feedback">
+        <div class="container-feedback">
+            <div class="main-title">
+                Phản hồi của người dùng
+            </div>
+            <div class="carousel-wrapper">
+                <button class="nav-btn prev">❮</button>
+
+                <div class="carousel-display">
+                    <div class="carousel-items">
+
+                        <div class="carousel-item">
+                            <div class="box-top-feedback">
+                                <img src="home/home-assets/avt1.svg" alt="avt" class="avt-feedback">
+                                <div class="right-box-feedback">
+                                    <div class="mini-title-feedback">
+                                        Nguyễn Long Nhật
+                                    </div>
+                                    <div class="mini-text-feedback">
+                                        Sinh viên trường Đại Học Công nghiệp TP.HCM
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-bottom-feedback">
+                                Kiếm được cái quán ưng bụng dễ sợ luôn á, 100000000 điểm cho website nì, sẽ giới thiệu
+                                cho bạn bè ạ.
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="box-top-feedback">
+                                <img src="home/home-assets/avt2.svg" alt="avt" class="avt-feedback">
+                                <div class="right-box-feedback">
+                                    <div class="mini-title-feedback">
+                                        Lê Thị Đức Việt
+                                    </div>
+                                    <div class="mini-text-feedback">
+                                        Sinh viên trường Đại Học sư phạm kĩ thuật TP. HCM
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-bottom-feedback">
+                                Qua bên trường bạn chơi, nhờ có web này mà kiếm được quán quá là ưng ý, ngon, hợp túi
+                                tiền. Đánh giá cao web này nha
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="box-top-feedback">
+                                <img src="home/home-assets/avt3.svg" alt="avt" class="avt-feedback">
+                                <div class="right-box-feedback">
+                                    <div class="mini-title-feedback">
+                                        Nguyễn Quý Nam
+                                    </div>
+                                    <div class="mini-text-feedback">
+                                        Sinh viên trường Đại Học Công nghiệp TP.HCM
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-bottom-feedback">
+                                Ê đỉnh nha, đỉnh nha, web gợi ý hơi bị hợp lí. Cảm ơn web đã cứu rỗi cuộc đời tôi.
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="box-top-feedback">
+                                <img src="home/home-assets/avt4.svg" alt="avt" class="avt-feedback">
+                                <div class="right-box-feedback">
+                                    <div class="mini-title-feedback">
+                                        Huỳnh Tú Duyên
+                                    </div>
+                                    <div class="mini-text-feedback">
+                                        Sinh viên trường Đại Học Sư Phạm TP.HCM
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-bottom-feedback">
+                                Web này gợi ý chuẩn nha, trúng quán hợp khẩu vị tui luôn, thấy không gian của quán được
+                                đề xuất hơi bị sạch sẽ. Biết ơn lắm lận.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-btn next">❯</button>
+            </div>
+        </div>
+    </section>
+    <script src="home/feedback.js"></script>
+
+    <!-- footer  -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-container-content">
+                <img src="home/home-assets/Logo.svg" alt="" class="footer-container-content-logo">
+                <p class="footer-container-content">Cảm ơn bạn vì đã dừng chân tại website của chúng tớ, chúc bạn kiếm
+                    được những món ăn thật sự phù hợp. Nhớ để lại bình luận nha</p>
+            </div>
+            <div class="footer-container-menu-mobile">
+                <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-select">Trang
+                    chủ</a>
+                <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-none">Khám phá</a>
+                <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-none">Liên hệ</a>
+            </div>
+            <div class="footer-container-menu">
+                <p class="footer-container-menu-home">Trang chủ</p>
+                <a href="" class="footer-container-menu-newfood">Quán ăn mới</a>
+                <a href="" class="footer-container-menu-toprate">Top đánh giá</a>
+            </div>
+            <div class="footer-container-support">
+                <p class="footer-container-support-sp">Hỗ trợ</p>
+                <a href="contact.html" class="footer-container-support-sparea">Trung tâm trợ giúp</a>
+                <a href="contact.html" class="footer-container-support-report">Báo cáo</a>
+                <a href="explore.html" class="footer-container-support-they">Về chúng tôi</a>
+            </div>
+            <div class="footer-container-contact">
+                <p class="footer-container-contact-text">Liên hệ</p>
+                <div class="footer-container-contact-container">
+                    <img src="home/home-assets/foot-icon-1.svg" alt="" class="footer-container-contact-container-icon">
+                    <img src="home/home-assets/foot-icon-2.svg" alt="" class="footer-container-contact-container-icon">
+                    <img src="home/home-assets/foot-icon-3.svg" alt="" class="footer-container-contact-container-icon">
+                    <img src="home/home-assets/foot-icon-4.svg" alt="" class="footer-container-contact-container-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
