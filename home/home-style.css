@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     font-family: 'Be Vietnam Pro';
     box-sizing: border-box;
@@ -324,227 +326,112 @@ body {
 }
 
 /* Đề xuất */
-.recommend {
-    width: 100%;
-    padding: 8px 0 15px 0;
-    display: flex;
-    justify-content: center;
+.recommend{
+  width: 95%;
+  max-width: 1220px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+:root {
+  --bg: #faf7d9;
+  --card: #fff;
+  --accent: #2f6e3f;
+}
+.top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
 }
 
-.recommend-container {
-    width: 90%;
-    max-width: 1220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.filters select, .search-box input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid #13460D;
+  background: #F9E8C3;
+  min-width: 160px;
 }
 
-.recommend-container-selects {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
+.search-box input {
+  min-width: 220px;
 }
 
-.recommend-container-selects-list {
-    width: 100%;
-    max-width: 228px;
-    min-height: 63px;
-    border: 2px solid #13460D;
-    background-color: #F9E8C3;
-    border-radius: 10px;
-    padding-left: 14px;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 24px;
-    line-height: 85px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    color: #000000;
+h1 {
+  margin: 6px 0 16px;
+  font-size: 22px;
 }
 
-.recommend-container-selects-price {
-    width: 100%;
-    max-width: 228px;
-    min-height: 63px;
-    border: 2px solid #13460D;
-    background-color: #F9E8C3;
-    border-radius: 10px;
-    padding-left: 14px;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 24px;
-    line-height: 85px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    color: #000000;
+.cards {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.recommend-container-selects-rates {
-    width: 100%;
-    max-width: 228px;
-    min-height: 63px;
-    border: 2px solid #13460D;
-    background-color: #F9E8C3;
-    border-radius: 10px;
-    padding-left: 14px;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 24px;
-    line-height: 85px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    color: #000000;
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
 }
 
-.recommend-container-selects-search {
-    width: 100%;
-    max-width: 228px;
-    min-height: 63px;
-    position: relative;
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.recommend-container-selects-search img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 21px;
+.card h3 {
+  margin: 12px 0 6px;
+  font-size: 18px;
 }
 
-.recommend-container-selects-search input {
-    width: 100%;
-    height: 100%;
-    padding-left: 60px;
-    border: 2px solid #13460D;
-    background-color: #F9E8C3;
-    border-radius: 10px;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 24px;
-    line-height: 85px;
-    vertical-align: middle;
-    color: #000000;
+.card p {
+  margin: 0;
+  color: #333;
 }
 
-.recommend-container-tittle {
-    width: 100%;
-    margin-top: 26px;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 32px;
-    line-height: 85px;
-    letter-spacing: 0%;
-    color: #000000;
+.detail-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
 }
 
-.recommend-container-food {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
+.pagination {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
-.recommend-container-food-box {
-    width: 100%;
-    max-width: 362.3222351074219px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 15px 1px #00000040;
-    padding: 19px;
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    transition: all 0.7s ease;
-}
-.recommend-container-food-box:hover {
-   scale: calc(1.02);
-    transition: all 0.7s ease;
-}
-
-.recommend-container-food-box-img {
-    width: 100%;
-    height: 324.5222473144531px;
-    box-shadow: 0px 1px 7.1px 4px #00000040;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.recommend-container-food-box-tittle {
-    margin-top: 15px;
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #000000;
-}
-
-.recommend-container-food-box-rates {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-
-.recommend-container-food-box-text {
-    margin-top: 10px;
-    font-weight: 500;
-    font-style: Italic;
-    font-size: 20px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #000000;
-}
-
-.recommend-container-food-box-button {
-    margin-top: 10px;
-    display: inline-block;
-    width: 100%;
-    max-width: 231.79620361328125px;
-    min-height: 42.87937927246094px;
-    background-color: #13460DC9;
-    border-radius: 9px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 29px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-.recommend-container-pages{
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
-}
-.recommend-container-pages-box{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
+.page-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
     border: 1px solid #13460D;
-    border-radius: 100%;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: 500;
+    font-style: Medium;
     font-size: 16px;
-    line-height: 85px;
-    letter-spacing: 0%;
     text-align: center;
     color: #FFC46A;
+    background-color: transparent;
+}
 
-}
-.recommend-container-pages .active{
+.page-btn.active {
+    background: var(--accent);
     background-color: #13460D;
-}
-.recommend-container-pages-box:hover{
-    background-color: #13460D;
-    opacity: 50%;
 }
 
 /* Phần hướng dẫn */

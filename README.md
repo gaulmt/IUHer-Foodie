@@ -11,4 +11,6 @@ Website giới thiệu các quán ăn phù hợp với bạn
  - Nguyễn Ngọc Thái  : Dev
 ## Cài đặt
 git clone https://github.com/gaulmt/IUHer-Foodie.git 
+## web
+https://gaulmt.ct.ws/
 

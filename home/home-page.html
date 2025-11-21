@@ -31,9 +31,9 @@
             <div class="header-lan-button">
                 <div class="header-language">
                     <img src="home-assets/head-language-icon.svg" alt="" class="header-language-icon">
-                    <select class="header-language-select">
-                        <option value="">Tiếng Việt</option>
-                        <option value="">English</option>
+                    <select class="header-language-select" id="languageSelect">
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="en">English</option>
                     </select>
                 </div>
                 <a href="../index.html" class="header-login">Đăng nhập</a>
@@ -45,7 +45,7 @@
             <div id="nav" class="nav hidden">
                 <div class="close-btn" style="text-align:right; font-size:28px; cursor:pointer; color: #FFC46A;">✕</div>
                 <a href="../home.html" class="item">Trang chủ</a>
-                <a href="" class="item">Giới thiệu</a>
+                <a href="../contact.html" class="item">Giới thiệu</a>
                 <a href="../contact.html" class="item">Liên hệ</a>
             </div>
             <script src="head-list.js"></script>
@@ -154,6 +154,18 @@
         </div>
     </div>
     <script src="page.js"></script>
+    <script>
+        // Language switcher
+        document.getElementById('languageSelect').addEventListener('change', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            const lang = this.value;
+
+            if (lang === 'en') {
+                window.location.href = 'home-page-E.html' + (id ? '?id=' + id : '');
+            }
+        });
+    </script>
 
     <!-- Footer -->
     <div class="footer">
@@ -171,14 +183,14 @@
             </div>
             <div class="footer-container-menu">
                 <p class="footer-container-menu-home">Trang chủ</p>
-                <a href="" class="footer-container-menu-newfood">Quán ăn mới</a>
-                <a href="" class="footer-container-menu-toprate">Top đánh giá</a>
+                <a href="../home.html" class="footer-container-menu-newfood">Quán ăn mới</a>
+                <a href="../home.html" class="footer-container-menu-toprate">Top đánh giá</a>
             </div>
             <div class="footer-container-support">
                 <p class="footer-container-support-sp">Hỗ trợ</p>
-                <a href="" class="footer-container-support-sparea">Trung tâm trợ giúp</a>
-                <a href="" class="footer-container-support-report">Báo cáo</a>
-                <a href="" class="footer-container-support-they">Về chúng tôi</a>
+                <a href="../contact.html" class="footer-container-support-sparea">Trung tâm trợ giúp</a>
+                <a href="../contact.html" class="footer-container-support-report">Báo cáo</a>
+                <a href="../explore.html" class="footer-container-support-they">Về chúng tôi</a>
             </div>
             <div class="footer-container-contact">
                 <p class="footer-container-contact-text">Liên hệ</p>

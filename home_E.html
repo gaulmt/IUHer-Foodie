@@ -16,15 +16,15 @@
         <div class="header-container">
             <img src="home/home-assets/Logo.svg" alt="" class="header-logo">
             <div class="header-menu">
-                <a href="home.html" class="header-menu-box menu-select">
+                <a href="home_E.html" class="header-menu-box menu-select">
                     <div class="header-menu-box-text">Home</div>
                     <div class="header-menu-box-circle"></div>
                 </a>
-                <a href="explore.html" class="header-menu-box menu-none">
+                <a href="explore_E.html" class="header-menu-box menu-none">
                     <div class="header-menu-box-text">Explore</div>
                     <div class="header-menu-box-circle"></div>
                 </a>
-                <a href="contact.html" class="header-menu-box menu-none">
+                <a href="contact_E.html" class="header-menu-box menu-none">
                     <div class="header-menu-box-text">Contact</div>
                     <div class="header-menu-box-circle"></div>
                 </a>
@@ -42,14 +42,14 @@
                 <a href="login.html" class="header-login">Log in</a>
             </div>
 
-            <!-- Menu list for tablet and mobile -->
+            <!-- Làm list menu cho tablet và mobile -->
             <img src="home/home-assets/head-list.svg" alt="" class="header-list">
             <div id="backdrop" class="backdrop hidden"></div>
             <div id="nav" class="nav hidden">
                 <div class="close-btn" style="text-align:right; font-size:28px; cursor:pointer; color: #FFC46A;">✕</div>
-                <a href="home.html" class="item">Home</a>
-                <a href="explore.html" class="item">Explore</a>
-                <a href="contact.html" class="item">Contact</a>
+                <a href="home_E.html" class="item">Home</a>
+                <a href="explore_E.html" class="item">Explore</a>
+                <a href="contact_E.html" class="item">Contact</a>
             </div>
             <script src="home/head-list.js"></script>
 
@@ -67,8 +67,7 @@
                                 you</span>?</h1>
                         <p class="hero-section-container-top-content-text">If you are a student struggling to find
                             “tasty, affordable, convenient” places to eat and drink, this website is tailor-made for
-                            you.
-                        </p>
+                            you.</p>
                         <p class="hero-section-container-top-content-text">Just a few clicks can lead you straight to
                             your next favorite spot—why not try it now?</p>
                     </section>
@@ -78,7 +77,7 @@
                     <div class="hero-section-container-top-content-bottom-button">
                         <img class="hero-section-container-top-content-bottom-button-boder"
                             src="home/home-assets/hero-border-radius.svg">
-                        <a href="explore.html" class="hero-section-container-top-content-bottom-button-explore">Explore
+                        <a href="#recommend" class="hero-section-container-top-content-bottom-button-explore">Explore
                             now</a>
                     </div>
                     <div class="hero-section-container-top-content-bottom-background-right"></div>
@@ -86,122 +85,41 @@
             </div>
         </div>
 
-        <!-- Recommendations -->
-        <div class="recommend">
-            <div class="recommend-container">
-                <div class="recommend-container-selects">
-                    <select name="Category" id="" class="recommend-container-selects-list">
-                        <option value="" disabled selected>Category</option>
-                        <option value="">Food</option>
-                        <option value="">Drinks</option>
+        <!-- Đề xuất -->
+        <div class="recommend" id="recommend">
+            <div class="top">
+                <div class="filters">
+                    <select id="categoryFilter">
+                        <option value="all">Category</option>
+                        <option value="food">Food</option>
+                        <option value="drink">Drink</option>
                     </select>
-                    <select name="" id="" class="recommend-container-selects-price">
-                        <option value="" disabled selected>Price</option>
+                    <select id="priceFilter">
+                        <option value="all">Price</option>
+                        <option value="low">≤ 30,000 VND</option>
+                        <option value="high">&gt; 30,000 VND</option>
                     </select>
-                    <select name="" id="" class="recommend-container-selects-rates">
-                        <option value="" disabled selected>Rating</option>
-                        <option value="">1 star</option>
-                        <option value="">2 stars</option>
-                        <option value="">3 stars</option>
-                        <option value="">4 stars</option>
-                        <option value="">5 stars</option>
+                    <select id="ratingFilter">
+                        <option value="all">Rating</option>
+                        <option value="5">5 star</option>
+                        <option value="4">4 star</option>
+                        <option value="3">3 star</option>
+                        <option value="2">2 star</option>
+                        <option value="1">1 star</option>
                     </select>
-                    <div class="recommend-container-selects-search">
-                        <img src="home/home-assets/icon-search.svg" alt="">
-                        <input type="text" placeholder="Search">
-                    </div>
-
                 </div>
-                <p class="recommend-container-tittle">Recommended</p>
-                <div class="recommend-container-food">
-                    <div class="recommend-container-food-box">
-                        <img src="home/home-assets/recommend-img-1.jpg" alt="" class="recommend-container-food-box-img">
-                        <p class="recommend-container-food-box-tittle">Mậu Rice Eatery</p>
-                        <div class="recommend-container-food-box-rates">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                        </div>
-                        <p class="Xem chi tiết">Price: From 30,000 VND</p>
-                        <a href="home/home-page.html" class="recommend-container-food-box-button">See details</a>
-                    </div>
-                    <div class="recommend-container-food-box">
-                        <img src="home/home-assets/recommend-img-2.png" alt="" class="recommend-container-food-box-img">
-                        <p class="recommend-container-food-box-tittle">Cơm Bao Cấp</p>
-                        <div class="recommend-container-food-box-rates">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                        </div>
-                        <p class="Xem chi tiết">Price: From 30,000 VND</p>
-                        <a href="home/home-page.html" class="recommend-container-food-box-button">See details</a>
-                    </div>
-                    <div class="recommend-container-food-box">
-                        <img src="home/home-assets/recommend-img-3.jpg" alt="" class="recommend-container-food-box-img">
-                        <p class="recommend-container-food-box-tittle">Hill Chicken Rice</p>
-                        <div class="recommend-container-food-box-rates">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                        </div>
-                        <p class="Xem chi tiết">Price: From 35,000 VND</p>
-                        <a href="home/home-page.html" class="recommend-container-food-box-button">See details</a>
-                    </div>
-                    <div class="recommend-container-food-box">
-                        <img src="home/home-assets/recommend-img-4.jpg" alt="" class="recommend-container-food-box-img">
-                        <p class="recommend-container-food-box-tittle">Pờ Eatery</p>
-                        <div class="recommend-container-food-box-rates">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                        </div>
-                        <p class="Xem chi tiết">Price: From 30,000 VND</p>
-                        <a href="home/home-page.html" class="recommend-container-food-box-button">See details</a>
-                    </div>
-                    <div class="recommend-container-food-box">
-                        <img src="home/home-assets/recommend-img-5.jpg" alt="" class="recommend-container-food-box-img">
-                        <p class="recommend-container-food-box-tittle">Homestyle Rice</p>
-                        <div class="recommend-container-food-box-rates">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                        </div>
-                        <p class="Xem chi tiết">Price: From 30,000 VND</p>
-                        <a href="home/home-page.html" class="recommend-container-food-box-button">See details</a>
-                    </div>
-                    <div class="recommend-container-food-box">
-                        <img src="home/home-assets/recommend-img-6.jpg" alt="" class="recommend-container-food-box-img">
-                        <p class="recommend-container-food-box-tittle">IUH Canteen</p>
-                        <div class="recommend-container-food-box-rates">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                            <img src="home/home-assets/recommend-star.svg" alt="">
-                        </div>
-                        <p class="Xem chi tiết">Price: From 35,000 VND</p>
-                        <a href="home/home-page.html" class="recommend-container-food-box-button">See details</a>
-                    </div>
-
-
-
-
+                <div class="search-box">
+                    <input id="searchInput" placeholder="Search" />
                 </div>
-                <div class="recommend-container-pages"></div>
             </div>
-        </div>
 
-        <!-- Guide section -->
+            <h1>Recommended</h1>
+            <div id="food-list" class="cards"></div>
+            <div id="pagination" class="pagination"></div>
+        </div>
+        <script src="home/recommend_E.js"></script>
+
+        <!-- Phần hướng dẫn -->
         <div class="guide">
             <section class="guide-content">
                 <h1 class="guide-content-tittle">Still haven’t found what you want?</h1>
@@ -233,7 +151,7 @@
 
     </div>
 
-    <!-- User feedback -->
+    <!-- Phần phản hồi của người dùng -->
     <section class="feedback">
         <div class="container-feedback">
             <div class="main-title">
@@ -327,8 +245,9 @@
         <div class="footer-container">
             <div class="footer-container-content">
                 <img src="home/home-assets/Logo.svg" alt="" class="footer-container-content-logo">
-                <p class="footer-container-content">Thanks for stopping by our website. We hope you find dishes that
-                    truly suit your taste. Don’t forget to leave a comment!</p>
+                <p class="footer-container-content">Cảm ơn bạn vì đã dừng chân tại website của chúng tớ, chúc bạn kiếm
+                    Thanks for stopping by our website. We hope you find dishes that truly suit your taste. Don’t forget
+                    to leave a comment!</p>
             </div>
             <div class="footer-container-menu-mobile">
                 <a href="" class="footer-container-menu-mobile-text footer-container-menu-mobile-text-select">Home</a>
@@ -337,14 +256,14 @@
             </div>
             <div class="footer-container-menu">
                 <p class="footer-container-menu-home">Home</p>
-                <a href="" class="footer-container-menu-newfood">New places</a>
-                <a href="" class="footer-container-menu-toprate">Top rated</a>
+                <a href="./home_E.html" class="footer-container-menu-newfood">New places</a>
+                <a href="./home_E.html" class="footer-container-menu-toprate">Top rated</a>
             </div>
             <div class="footer-container-support">
                 <p class="footer-container-support-sp">Support</p>
-                <a href="" class="footer-container-support-sparea">Help center</a>
-                <a href="" class="footer-container-support-report">Report</a>
-                <a href="" class="footer-container-support-they">About us</a>
+                <a href="contact_E.html" class="footer-container-support-sparea">Help center</a>
+                <a href="contact_E.html" class="footer-container-support-report">Report</a>
+                <a href="explore_E.html" class="footer-container-support-they">About us</a>
             </div>
             <div class="footer-container-contact">
                 <p class="footer-container-contact-text">Contact</p>

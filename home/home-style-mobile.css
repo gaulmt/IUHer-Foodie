@@ -38,8 +38,14 @@
     }
 
     /* home-page */
+    .page-container-top{
+        padding-top: 400px;
+    }
     .page-container-top-content{
-        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .page-container-top-content-img{
+        height: 150px;
     }
     .page-container-select .active {
         background-color: #FFC46A82;
@@ -591,4 +597,28 @@
         font-weight: 400;
         font-size: 13px;
 }
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .cards {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .cards {
+      grid-template-columns: 1fr;
+  }
+  .top {
+      flex-direction: column;
+      align-items: stretch;
+  }
+  .search-box input {
+      width: 100%;
+  }
 }
